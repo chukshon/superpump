@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  /* primary (purple) button */
+  .btn-base {
+    @apply flex items-center justify-center gap-[10px] rounded-[9px] border px-6 py-2 text-center text-[13px] font-medium disabled:cursor-not-allowed h-[40px];
+  }
+  .btn {
+    @apply btn-base;
+    @apply btn-base text-neutral-0 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn-base border-purple-400 bg-gradient-to-r from-purple-600 to-purple-500 text-neutral-0;
+  }
+
+  /* primary (purple) outline button */
+  .btn-primary-outline {
+    @apply btn-base border-2 border-purple-400 text-purple-400 transition-colors disabled:opacity-[0.3];
+  }
+
+  .btn-primary-outline:hover {
+    @apply bg-purple-100;
+  }
+
+  .btn-primary-outline:disabled {
+    @apply cursor-not-allowed border-purple-100 text-purple-100;
+  }
+
+  /* primary (purple) text button */
+  .btn-primary-text {
+    @apply text-center font-medium text-purple-400 transition-colors;
+  }
+
+  .btn-primary-text:hover {
+    @apply text-purple-500;
+  }
+
+  .btn-primary-text:disabled {
+    @apply cursor-not-allowed border-purple-100 text-purple-100 opacity-[0.5];
+  }
+
+  /* Green gradient */
+  .green-gradient-1 {
+    color: linear-gradient(247.44deg,#c7f284 13.88%,#00bef0 99.28%)
+  }
+}
