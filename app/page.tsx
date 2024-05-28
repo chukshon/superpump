@@ -5,15 +5,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="bg-[#111111] h-[100vh] text-neutral-0 relative">
-      {/* Header Eclipse */}
-      <div className="absolute top-[0px] right-[15%]">
-        <Image
-          src="/images/header-eclipse.png"
-          width="300"
-          height="300"
-          alt="header eclipse"
-        />
-      </div>
       <Header />
       <Footer />
     </main>

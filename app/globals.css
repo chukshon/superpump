@@ -73,14 +73,17 @@
 }
 
 @layer components {
+
   /* primary (purple) button */
   .btn-base {
     @apply flex items-center justify-center gap-[10px] rounded-[9px] border px-6 py-2 text-center text-[13px] font-medium disabled:cursor-not-allowed h-[40px];
   }
+
   .btn {
     @apply btn-base;
     @apply btn-base text-neutral-0 disabled:cursor-not-allowed;
   }
+
   .btn-primary {
     @apply btn-base border-purple-400 bg-gradient-to-r from-purple-600 to-purple-500 text-neutral-0;
   }
@@ -111,8 +114,16 @@
     @apply cursor-not-allowed border-purple-100 text-purple-100 opacity-[0.5];
   }
 
-  /* Green gradient */
-  .green-gradient-1 {
-    color: linear-gradient(247.44deg,#c7f284 13.88%,#00bef0 99.28%)
+  /* border gradient */
+  .gradient-border {
+    /* Adjust based on desired border thickness */
+    background: linear-gradient(to right, #FFFFFF 33%, #003CFF 33%, #003CFF 66%, #FFFFFF 66%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+  }
+
+  .bg-custom-radial {
+    background-image: radial-gradient(circle, rgba(0, 60, 255, 1) 0%, rgba(0, 60, 255, 0.8) 40%, rgba(0, 60, 255, 0.32) 100%);
   }
 }

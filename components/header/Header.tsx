@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import SearchInput from "./SearchInput";
+import ConnectWalletHeader from "./ConnectWalletHeader";
 
 const Header = () => {
   const socials = [
@@ -53,7 +54,7 @@ const Header = () => {
     },
   ];
   return (
-    <header className="">
+    <header className="border-b-[3px] border-neutral-0">
       <div className="container flex items-center gap-[40px] py-[30px] px-[0px]">
         {/* LOGO */}
         <Image
@@ -95,6 +96,9 @@ const Header = () => {
 
         {/* SEARCH INPUT */}
         <SearchInput />
+
+        {/* Connect Wallet */}
+        <ConnectWalletHeader />
       </div>
     </header>
   );
