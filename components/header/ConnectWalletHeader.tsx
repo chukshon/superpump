@@ -3,7 +3,7 @@ import React from "react";
 import { MdOutlineLogout } from "react-icons/md";
 
 const ConnectWalletHeader = () => {
-  const isConnected = true;
+  const isConnected = false;
 
   return (
     <div>
@@ -14,9 +14,10 @@ const ConnectWalletHeader = () => {
             width="32"
             height="32"
             alt="Eth Logo"
+            className="z-30"
           />
 
-          <p className="text-[#B2B2B2]">0X57db....A17B</p>
+          <p className="text-[#B2B2B2] z-30">0X57db....A17B</p>
           <Image
             src="/icons/logout.svg"
             width="18"
@@ -25,7 +26,12 @@ const ConnectWalletHeader = () => {
           />
         </div>
       ) : (
-        <button type="button">Connect wallet</button>
+        <button
+          type="button"
+          className="z-30 rounded-[4px] bg-custom-radial py-[10px] px-[30px]"
+        >
+          Connect wallet
+        </button>
       )}
     </div>
   );

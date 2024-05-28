@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import SearchInput from "./SearchInput";
 import ConnectWalletHeader from "./ConnectWalletHeader";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   const socials = [
@@ -55,7 +56,7 @@ const Header = () => {
   ];
   return (
     <header className="border-b-[3px] border-neutral-0">
-      <div className="container flex items-center gap-[40px] py-[30px] px-[0px]">
+      <div className="justify-between mx-auto max-w-[1400px] w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
         {/* LOGO */}
         <Image
           src="/icons/superpumpfun-logo.svg"
@@ -64,8 +65,13 @@ const Header = () => {
           alt="superpumpfun logo"
         />
 
+        {/* Mobile Connect Wallet */}
+        <div className="lg:hidden flex">
+          <ConnectWalletHeader />
+        </div>
+
         {/* SOCIALS */}
-        <ul className="flex items-center gap-[20px]">
+        <ul className="items-center gap-[20px] hidden lg:flex">
           {socials.map((social, index) => {
             return (
               <li key={index}>
@@ -83,11 +89,11 @@ const Header = () => {
         </ul>
 
         {/* TOKENOMICS */}
-        <ul className="flex items-center gap-y-[10px] gap-x-[30px]">
+        <ul className="hidden items-center gap-x-[30px] lg:flex">
           {tokenomics.map((info, index) => {
             return (
               <li key={index}>
-                <p>{info.title}</p>
+                <p className="">{info.title}</p>
                 <p className="mt-[15px]">{info.desc}</p>
               </li>
             );
@@ -95,10 +101,19 @@ const Header = () => {
         </ul>
 
         {/* SEARCH INPUT */}
-        <SearchInput />
+        <div className="hidden xl:flex">
+          <SearchInput />
+        </div>
 
-        {/* Connect Wallet */}
-        <ConnectWalletHeader />
+        {/* Connect Wallet desktop*/}
+        <div className="hidden lg:flex">
+          <ConnectWalletHeader />
+        </div>
+
+        {/* Mobile Nav */}
+        <div className="flex lg:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
