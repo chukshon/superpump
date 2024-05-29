@@ -93,7 +93,7 @@ const Header = () => {
           {tokenomics.map((info, index) => {
             return (
               <li key={index}>
-                <p className="">{info.title}</p>
+                <p className="text-[16px] w-max">{info.title}</p>
                 <p className="mt-[15px]">{info.desc}</p>
               </li>
             );

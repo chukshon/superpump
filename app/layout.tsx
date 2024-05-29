@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter, roboto } from "./fonts";
+import { space_grotesk, chakra_Petch, inter } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${roboto.className}`}>
+      <body
+        className={`${space_grotesk.className} ${chakra_Petch.className} ${inter.className}`}
+      >
         {children}
       </body>
     </html>

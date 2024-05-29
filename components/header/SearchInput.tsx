@@ -6,7 +6,7 @@ const SearchInput = () => {
     <div className="rounded-[10px] relative border-[1px] py-[15px] px-[10px] w-[450px] flex items-center gap-[10px]">
       <input
         placeholder="Search for token name or contr. . ."
-        className="w-[70%] outline-none bg-[transparent] placeholder:text-[#4A4A4ACC] text-neutral-50 active:bg-[transparent] "
+        className="w-[70%] outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4ACC] text-neutral-50 active:bg-[transparent] "
       />
       <button className="z-30 rounded-[4px] w-[30%] bg-custom-radial py-[3px] px-[20px]">
         Search

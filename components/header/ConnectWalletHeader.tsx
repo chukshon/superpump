@@ -25,7 +25,7 @@ const ConnectWalletHeader = () => {
               className="z-30"
             />
 
-            <p className="text-[#B2B2B2] z-30">0X57db....A17B</p>
+            <p className="text-[#B2B2B2] z-30 text-[16px]">0X57db....A17B</p>
             <Image
               src="/icons/logout.svg"
               width="18"
