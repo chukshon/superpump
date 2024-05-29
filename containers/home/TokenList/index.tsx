@@ -1,5 +1,6 @@
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import React from "react";
+import TokenCard from "./TokenCard/TokenCardDesktopView";
 
 const TokenList = () => {
   return (
@@ -11,6 +12,7 @@ const TokenList = () => {
       </div>
 
       {/* Token List */}
+      <ul></ul>
     </div>
   );
 };
