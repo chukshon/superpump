@@ -1,26 +1,18 @@
 import React from "react";
 import TokenCardDesktopView from "./TokenCardDesktopView";
 import TokenCardMobileView from "./TokenCardMobileView";
+import { TokenT } from "@/types";
 
-type TokenCardProps = {
-  tokenName: string;
-  tokenIcon: string;
-  marketCap: string;
-  creatorAddress: string;
-  tokenDescription: string;
-};
-const TokenCard = ({
-  tokenName,
-  tokenIcon,
-  marketCap,
-  creatorAddress,
-  tokenDescription,
-}: TokenCardProps) => {
+export interface TokenCardProps extends TokenT {
+  index: number;
+}
+
+const TokenCard = (props: TokenCardProps) => {
   return (
-    <div>
-      <TokenCardDesktopView />
-      <TokenCardMobileView />
-    </div>
+    <>
+      <TokenCardDesktopView {...props} />
+      <TokenCardMobileView {...props} />
+    </>
   );
 };
 

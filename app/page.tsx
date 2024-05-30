@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-[#111111] h-[100vh] text-neutral-0 relative">
+    <main className="h-full bg-[#111111]  text-neutral-0 relative">
       <Header />
       <MainPageDesktopView />
       <MainPageMobileView />

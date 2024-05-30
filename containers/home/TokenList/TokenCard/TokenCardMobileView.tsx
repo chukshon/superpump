@@ -1,7 +1,11 @@
 import React from "react";
+import { TokenT } from "@/types";
 
-const TokenCardMobileView = () => {
-  return <div>TokenCardMobileView</div>;
+export interface TokenCardProps extends TokenT {
+  index: number;
+}
+const TokenCardMobileView = (props: TokenCardProps) => {
+  return <div className="flex lg:hidden">TokenCardMobileView</div>;
 };
 
 export default TokenCardMobileView;

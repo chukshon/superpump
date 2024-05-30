@@ -1,18 +1,63 @@
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import React from "react";
-import TokenCard from "./TokenCard/TokenCardDesktopView";
+import { TokenT } from "@/types";
+import TokenCard from "./TokenCard";
 
 const TokenList = () => {
+  const tokenList: TokenT[] = [
+    {
+      tokenName: "SUPERPUMP",
+      tokenIcon: "/images/tokens/superpump-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PUMP",
+    },
+    {
+      tokenName: "BEACHPLS",
+      tokenIcon: "/images/tokens/beach-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PUMP",
+    },
+    {
+      tokenName: "PEPEFLAG",
+      tokenIcon: "/images/tokens/pepeflag-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PUMP",
+    },
+    {
+      tokenName: "LAMBORANGE",
+      tokenIcon: "/images/tokens/lamborange-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PUMP",
+    },
+  ];
   return (
     <div className="w-[65%]">
       {/* Top Action Bar */}
-      <div className="border-[1px] border-neutral-0 rounded-[10px] flex justify-between py-[10px] px-[10px]">
-        <button>Create Token</button>
+      <div className=" border-[1px] border-neutral-0 rounded-[10px] flex  py-[10px] px-[10px] gap-[40px]">
+        <button className="w-[60%] rounded-[4px] bg-custom-radial py-[3px] px-[20px">
+          Create Token
+        </button>
         <SelectVariantOne label="Sort:" />
       </div>
 
       {/* Token List */}
-      <ul></ul>
+      <ul className="flex flex-wrap gap-x-[20px] gap-y-[20px] px-[20px] mt-[30px]">
+        {tokenList.map((token, index) => {
+          return <TokenCard key={token.tokenName} {...token} index={index} />;
+        })}
+      </ul>
     </div>
   );
 };

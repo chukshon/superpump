@@ -14,7 +14,7 @@ const MainPageDesktopView = () => {
         <LatestTransactionSection />
       </div>
 
-      <div className="pl-[20px] flex items-center gap-[20px]  w-[100%]">
+      <div className="pl-[20px] flex items-start gap-[20px]  w-[100%]">
         {/* Token List Section */}
         <TokenList />
 
