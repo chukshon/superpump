@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${space_grotesk.className} ${chakra_Petch.className} ${inter.className}`}
+        className={`bg-[#111111] ${space_grotesk.className} ${chakra_Petch.className} ${inter.className}`}
       >
         {children}
       </body>

@@ -21,7 +21,7 @@ const TokenList = () => {
       creatorAddress: "0x123....ab1c1d",
       tokenDescription:
         "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
-      tokenTicker: "$PUMP",
+      tokenTicker: "$BPLS",
     },
     {
       tokenName: "PEPEFLAG",
@@ -30,7 +30,7 @@ const TokenList = () => {
       creatorAddress: "0x123....ab1c1d",
       tokenDescription:
         "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
-      tokenTicker: "$PUMP",
+      tokenTicker: "$PFLAG",
     },
     {
       tokenName: "LAMBORANGE",
@@ -39,11 +39,11 @@ const TokenList = () => {
       creatorAddress: "0x123....ab1c1d",
       tokenDescription:
         "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
-      tokenTicker: "$PUMP",
+      tokenTicker: "$LORA",
     },
   ];
   return (
-    <div className="w-[65%]">
+    <div className="w-[70%]">
       {/* Top Action Bar */}
       <div className=" border-[1px] border-neutral-0 rounded-[10px] flex  py-[10px] px-[10px] gap-[40px]">
         <button className="w-[60%] rounded-[4px] bg-custom-radial py-[3px] px-[20px">
@@ -53,7 +53,7 @@ const TokenList = () => {
       </div>
 
       {/* Token List */}
-      <ul className="flex flex-wrap gap-x-[20px] gap-y-[20px] px-[20px] mt-[30px]">
+      <ul className="flex flex-wrap gap-x-[10px] gap-y-[20px] px-[40px] mt-[30px]">
         {tokenList.map((token, index) => {
           return <TokenCard key={token.tokenName} {...token} index={index} />;
         })}
