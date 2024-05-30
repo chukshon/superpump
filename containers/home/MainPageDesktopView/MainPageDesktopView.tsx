@@ -3,6 +3,7 @@ import QuickPortfolioSection from "../QuickPortfolioSection";
 import LeaderboardSection from "../LeaderboardSection";
 import LatestTransactionSection from "../LatestTransactionSection";
 import TokenList from "../TokenList";
+import ChatSection from "../ChatSection";
 
 const MainPageDesktopView = () => {
   return (
@@ -16,10 +17,14 @@ const MainPageDesktopView = () => {
 
       <div className="pl-[20px] flex items-start gap-[20px]  w-[100%]">
         {/* Token List Section */}
-        <TokenList />
+        <div className="w-[70%]">
+          <TokenList />
+        </div>
 
         {/* Chat Section */}
-        <div>Chat Section</div>
+        <div className="w-[30%]">
+          <ChatSection />
+        </div>
       </div>
     </div>
   );

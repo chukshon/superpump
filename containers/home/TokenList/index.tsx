@@ -43,7 +43,7 @@ const TokenList = () => {
     },
   ];
   return (
-    <div className="w-[70%]">
+    <div className="">
       {/* Top Action Bar */}
       <div className=" border-[1px] border-neutral-0 rounded-[10px] flex  py-[10px] px-[10px] gap-[40px]">
         <button className="w-[60%] rounded-[4px] bg-custom-radial py-[3px] px-[20px">
