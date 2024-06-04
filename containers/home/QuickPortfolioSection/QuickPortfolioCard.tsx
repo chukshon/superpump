@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const QuickPortfolioCard = () => {
   return (
-    <UnionBorderContainer>
-      <div className="bg-[url('/images/brown-rectangle.svg')] max-w-[474px] min-h-[330px] object-cover bg-no-repeat px-[40px] py-[15px]">
+    <div className="w-full">
+      <UnionBorderContainer>
         <div className="flex items-start gap-[80px]">
-          <div className="flex items-center">
+          <div className="flex items-start lg:items-center">
             <Image
               src="/images/user.png"
               alt="brown-rectangle-bg"
@@ -19,24 +19,30 @@ const QuickPortfolioCard = () => {
             />
             <div>
               <div>
-                <h1>Current Balance</h1>
+                <h1 className="text-[12px] lg:text-[16px] w-max">
+                  Current Balance
+                </h1>
                 <p>$ 1,233.23</p>
               </div>
-              <div className="mt-[10px]">
-                <Link href="manage-porfolio" className="underline">
+              <div className="lg:mt-[10px] w-max">
+                <Link href="manage-porfolio" className="underline w-max">
                   Manage Portfolio
                 </Link>
               </div>
             </div>
           </div>
-          <div className="mt-[10px]">
-            <p>PNL:</p>
-            <p className="text-[#24FF00]">+$123.23</p>
+          <div className="lg:mt-[10px]">
+            <p className="text-[12px] lg:text-[16px]">PNL:</p>
+            <p className="text-[#24FF00] text-[12px] lg:text-[16px]">
+              +$123.23
+            </p>
           </div>
         </div>
-        <DefaultTable />
-      </div>
-    </UnionBorderContainer>
+        <div className="mt-[30px]">
+          <DefaultTable />
+        </div>
+      </UnionBorderContainer>
+    </div>
   );
 };
 

@@ -114,6 +114,10 @@
     @apply cursor-not-allowed border-purple-100 text-purple-100 opacity-[0.5];
   }
 
+  .container {
+    @apply max-w-[1600px] mx-auto
+  }
+
   /* border gradient */
   .gradient-border {
     /* Adjust based on desired border thickness */
@@ -125,5 +129,9 @@
 
   .bg-custom-radial {
     background-image: radial-gradient(circle, rgba(0, 60, 255, 1) 0%, rgba(0, 60, 255, 0.8) 40%, rgba(0, 60, 255, 0.32) 100%);
+  }
+
+  .bg-custom-radial2 {
+    background-image: radial-gradient(circle, rgba(0, 60, 255, 1), rgba(0, 60, 255, 0.8), rgba(0, 60, 255, 0.32));
   }
 }

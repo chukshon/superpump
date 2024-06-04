@@ -3,10 +3,11 @@ import LatestTransactionItem from "./LatestTransactionItem";
 
 const LatestTransactionSection = () => {
   return (
-    <div className="w-[474px] h-[330px]">
-      <h1 className="text-center text-[32px] font-[600]">
+    <div className="w-full lg:w-max">
+      <h1 className="text-center text-[32px] font-[600] hidden lg:block">
         Latest Transactions
       </h1>
+
       <LatestTransactionItem />
     </div>
   );
