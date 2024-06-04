@@ -56,7 +56,7 @@ const Header = () => {
   ];
   return (
     <header className="border-b-[3px] border-neutral-0">
-      <div className="justify-between mx-auto max-w-[1400px] w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
+      <div className="justify-between container w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
         {/* LOGO */}
         <Image
           src="/icons/superpumpfun-logo.svg"

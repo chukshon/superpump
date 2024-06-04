@@ -11,7 +11,7 @@ const ConnectWalletHeader = () => {
         <div>
           <button
             type="button"
-            className="lg:hidden rounded-[4px] bg-custom-radial py-[10px] px-[30px]"
+            className="lg:hidden text-[11px] rounded-[4px] bg-custom-radial py-[10px] px-[20px]"
           >
             Dashboard
           </button>

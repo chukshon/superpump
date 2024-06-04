@@ -45,6 +45,18 @@ const data: Payment[] = [
     status: "processing",
     email: "Monserrat44@gmail.com",
   },
+  {
+    id: "derv2ws0",
+    amount: 839,
+    status: "processing",
+    email: "Monserrat44@gmail.com",
+  },
+  {
+    id: "derv5ws0",
+    amount: 537,
+    status: "processing",
+    email: "Monserrat44@gmail.com",
+  },
 ];
 
 export type Payment = {
@@ -123,7 +135,7 @@ export function DefaultTable() {
   });
 
   return (
-    <div className="w-full">
+    <div className="w-[100%]">
       <div className="rounded-md border">
         <Table>
           <TableHeader>
