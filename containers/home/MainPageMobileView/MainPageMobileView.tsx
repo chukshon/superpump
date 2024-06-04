@@ -28,7 +28,7 @@ const MainPageMobileView = () => {
   ];
 
   const [selectedTab, setSelectedTab] = React.useState<tabsT | null>(
-    "portfolio"
+    "superChat"
   );
 
   const renderTab = () => {
@@ -66,7 +66,7 @@ const MainPageMobileView = () => {
       </div>
 
       {/* Selected Tab */}
-      <div className="max-w-[1000px] flex justify-center mt-[30px] mx-[30px]">
+      <div className=" flex justify-center mt-[30px] mx-[10px]">
         {renderTab()}
       </div>
     </div>
