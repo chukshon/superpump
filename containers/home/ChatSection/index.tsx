@@ -22,7 +22,7 @@ const ChatSection = () => {
   return (
     <div className="border-[1px] border-neutral-0 pt-[10px] rounded-[8px] w-full">
       {/* Chat List */}
-      <ul className="min-h-[500px]">
+      <ul className="min-h-[300px] lg:min-h-[500px]">
         {Chats.map((chat, index) => {
           return <ChatItem {...chat} index={index} />;
         })}

@@ -5,6 +5,10 @@ import QuickPortfolioSection from "../QuickPortfolioSection";
 import LatestTransactionSection from "../LatestTransactionSection";
 import LeaderboardSection from "../LeaderboardSection";
 import ChatSection from "../ChatSection";
+import SearchInput from "./SearchInput";
+import SelectVariantOne from "@/components/ui/SelectVariantOne";
+import { TokenT } from "@/types";
+import TokenCardMobileView from "../MainPageDesktopView/TokenList/TokenCard/TokenCardMobileView";
 
 const MainPageMobileView = () => {
   type tabsT = "superChat" | "portfolio" | "leaderboards" | "latestTx";
@@ -30,6 +34,45 @@ const MainPageMobileView = () => {
   const [selectedTab, setSelectedTab] = React.useState<tabsT | null>(
     "superChat"
   );
+
+  const TokenList: TokenT[] = [
+    {
+      tokenName: "SUPERPUMP",
+      tokenIcon: "/images/tokens/superpump-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PUMP",
+    },
+    {
+      tokenName: "BEACHPLS",
+      tokenIcon: "/images/tokens/beach-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$BPLS",
+    },
+    {
+      tokenName: "PEPEFLAG",
+      tokenIcon: "/images/tokens/pepeflag-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$PFLAG",
+    },
+    {
+      tokenName: "LAMBORANGE",
+      tokenIcon: "/images/tokens/lamborange-token.svg",
+      marketCap: "25,000,000",
+      creatorAddress: "0x123....ab1c1d",
+      tokenDescription:
+        "This token is created to profit 100000x. You will become a millionaire!!! Buy this token and forget about it. Check again after 3 months.",
+      tokenTicker: "$LORA",
+    },
+  ];
 
   const renderTab = () => {
     switch (selectedTab) {
@@ -81,6 +124,29 @@ const MainPageMobileView = () => {
                 tab.value === selectedTab ? "bg-[#003CFF]" : "bg-[#4A4A4A]"
               } rounded-[5px]`}
             ></li>
+          );
+        })}
+      </ul>
+
+      {/* Search */}
+      <div className="mt-[40px] px-[10px]">
+        <SearchInput />
+      </div>
+
+      {/* Select */}
+      <div className="px-[10px] mt-[20px] ">
+        <SelectVariantOne label="Sort:" />
+      </div>
+
+      {/* Token List */}
+      <ul className="mt-[80px] flex justify-center flex-col items-center">
+        {TokenList.map((token, index) => {
+          return (
+            <TokenCardMobileView
+              key={token.tokenName}
+              {...token}
+              index={index}
+            />
           );
         })}
       </ul>

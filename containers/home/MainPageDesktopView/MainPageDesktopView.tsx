@@ -2,7 +2,7 @@ import React from "react";
 import QuickPortfolioSection from "../QuickPortfolioSection";
 import LeaderboardSection from "../LeaderboardSection";
 import LatestTransactionSection from "../LatestTransactionSection";
-import TokenList from "../TokenList";
+import TokenList from "./TokenList";
 import ChatSection from "../ChatSection";
 
 const MainPageDesktopView = () => {
