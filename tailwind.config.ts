@@ -132,6 +132,8 @@ const config = {
       fontFamily: {
         roboto: ["var(--font-roboto)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
+        space_grotesk: ["var(--font-space_grotesk)", "sans-serif"],
+        chakra_Petch: ["var(--font-chakra_Petch)", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

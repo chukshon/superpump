@@ -89,7 +89,7 @@ const Header = () => {
         </ul>
 
         {/* TOKENOMICS */}
-        <ul className="hidden items-center gap-x-[30px] lg:flex">
+        <ul className="text-neutral-0  hidden items-center gap-x-[30px] lg:flex">
           {tokenomics.map((info, index) => {
             return (
               <li key={index}>

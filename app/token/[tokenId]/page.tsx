@@ -4,11 +4,11 @@ import React from "react";
 
 const TokenDetails = () => {
   return (
-    <div className="container">
+    <div className="">
       {/* Top Bar */}
       <TopBar />
 
-      <div className=" flex items-start mt-[30px] gap-[20px]">
+      <div className=" flex items-start mt-[30px] gap-[20px] container">
         {/* Left Col */}
         <div className="w-[70%] h-[1000px] border-[1px] border-neutral-0">
           <ChartView />
