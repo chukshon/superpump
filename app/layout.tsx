@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { space_grotesk, chakra_Petch, inter } from "./fonts";
 import "./globals.css";
+import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
   title: "SuperPump | Trade",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={`bg-[#111111] ${space_grotesk.className} ${chakra_Petch.className} ${inter.className}`}
       >
+        <Header />
         {children}
       </body>
     </html>

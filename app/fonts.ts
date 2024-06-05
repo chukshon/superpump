@@ -25,7 +25,7 @@ export const space_grotesk = Space_Grotesk({
 export const chakra_Petch = Chakra_Petch({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal"],
-  variable: "--font-space_grotesk",
+  variable: "--font-chakra_Petch",
   subsets: ["latin"],
   display: "swap",
 });
