@@ -69,6 +69,21 @@ const MainPageMobileView = () => {
       <div className=" flex justify-center mt-[30px] mx-[10px]">
         {renderTab()}
       </div>
+
+      {/* Carousel */}
+      <ul className="flex  gap-[30px] items-center mt-[30px] justify-center">
+        {TabsData.map((tab, index) => {
+          return (
+            <li
+              onClick={() => handleTabClick(tab.value)}
+              key={tab.value}
+              className={`h-[10px] w-[20px] ${
+                tab.value === selectedTab ? "bg-[#003CFF]" : "bg-[#4A4A4A]"
+              } rounded-[5px]`}
+            ></li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

@@ -22,7 +22,7 @@ const MainPageDesktopView = () => {
         </div>
 
         {/* Chat Section */}
-        <div className="w-[30%]">
+        <div className="w-[30%] hidden lg:block">
           <ChatSection />
         </div>
       </div>

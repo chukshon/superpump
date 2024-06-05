@@ -53,7 +53,7 @@ const TokenList = () => {
       </div>
 
       {/* Token List */}
-      <ul className="flex flex-wrap gap-x-[10px] gap-y-[20px] px-[40px] mt-[30px]">
+      <ul className="flex flex-wrap gap-x-[10px] gap-y-[20px] px-[10px] mt-[30px] justify-center">
         {tokenList.map((token, index) => {
           return <TokenCard key={token.tokenName} {...token} index={index} />;
         })}
