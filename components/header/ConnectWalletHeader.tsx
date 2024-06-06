@@ -6,12 +6,12 @@ const ConnectWalletHeader = () => {
   const isConnected = true;
 
   return (
-    <div>
+    <>
       {isConnected ? (
         <div>
           <button
             type="button"
-            className="lg:hidden text-[11px] rounded-[4px] bg-custom-radial py-[10px] px-[20px]"
+            className="text-neutral-0 lg:hidden text-[11px] rounded-[4px] bg-custom-radial py-[10px] px-[20px]"
           >
             Dashboard
           </button>
@@ -37,12 +37,12 @@ const ConnectWalletHeader = () => {
       ) : (
         <button
           type="button"
-          className="z-30 rounded-[4px] bg-custom-radial py-[10px] px-[30px]"
+          className="hidden z-30 rounded-[4px] bg-custom-radial py-[10px] px-[30px]"
         >
           Connect wallet
         </button>
       )}
-    </div>
+    </>
   );
 };
 

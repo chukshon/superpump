@@ -71,7 +71,7 @@ const Header = () => {
         </div>
 
         {/* SOCIALS */}
-        <ul className="items-center gap-[20px] hidden lg:flex">
+        <ul className=" items-center gap-[20px] hidden lg:flex">
           {socials.map((social, index) => {
             return (
               <li key={index}>
