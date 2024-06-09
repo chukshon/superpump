@@ -12,12 +12,12 @@ const Desktop = () => {
       <TopBar />
 
       <div className=" flex items-start mt-[30px] gap-[20px] container">
-        {/* Chart Left Col */}
+        {/* Chart Left Column */}
         <div className="w-[70%] border-[1px] border-neutral-0">
           <ChartView />
         </div>
 
-        {/* Token Actions Right Col */}
+        {/* Token Actions Right Column */}
         <div className="w-[30%]  border-[1px] border-neutral-0 px-[10px] py-[10px] rounded-[8px]">
           {/* Trade details */}
           <div className="mt-[10px]">
