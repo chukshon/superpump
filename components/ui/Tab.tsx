@@ -2,12 +2,11 @@ import React from "react";
 
 type TabProps = {
   tab: { label: string; value: string };
-  selectedTab: string;
+  isActive: boolean;
   handleTabClick: (value: string) => void;
 };
 
-const Tab = ({ tab, selectedTab, handleTabClick }: TabProps) => {
-  const isActive = selectedTab === tab.value;
+const Tab = ({ tab, handleTabClick, isActive }: TabProps) => {
   return (
     <div
       onClick={() => handleTabClick(tab.value)}

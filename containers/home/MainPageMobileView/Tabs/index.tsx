@@ -1,5 +1,5 @@
+import Tab from "@/components/ui/Tab";
 import React from "react";
-import Tab from "./Tab";
 
 const Tabs = ({
   TabsData,
@@ -17,7 +17,7 @@ const Tabs = ({
           <Tab
             handleTabClick={() => handleTabClick(tab.value)}
             tab={tab}
-            selectedTab={selectedTab}
+            isActive={selectedTab === tab.value}
           />
         );
       })}
