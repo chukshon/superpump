@@ -1,3 +1,5 @@
+"use client";
+
 import Tab from "@/components/ui/Tab";
 import React from "react";
 
@@ -20,7 +22,9 @@ const Tabs = () => {
       value: "topTraders",
     },
   ];
-  const handleTabClick = () => {};
+  const handleTabClick = (value: string) => {
+    console.log(value);
+  };
   const selectedTab = "tradeHistory";
 
   return (

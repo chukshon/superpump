@@ -11,10 +11,12 @@ const Tab = ({ tab, handleTabClick, isActive }: TabProps) => {
     <div
       onClick={() => handleTabClick(tab.value)}
       className={`${
-        isActive ? "bg-custom-radial2 py-[2px] px-[6px]" : "py-[2px] px-[6px]"
+        isActive
+          ? "text-neutral-0 bg-custom-radial2 py-[2px] px-[6px]"
+          : " py-[2px] px-[6px] text-neutral-0"
       }`}
     >
-      <p className="text-[11px]">{tab.label}</p>
+      <p className="text-[13px]">{tab.label}</p>
     </div>
   );
 };

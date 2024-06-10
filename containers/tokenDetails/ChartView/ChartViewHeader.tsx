@@ -7,7 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 const ChartViewHeader = () => {
   return (
-    <div className="flex justify-between items-center py-[15px]">
+    <div className="flex justify-between items-center">
       <div className="flex items-center gap-[15px]">
         {/* Token info */}
         <div className="flex items-center gap-[8px]">
