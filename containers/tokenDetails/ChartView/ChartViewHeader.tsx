@@ -7,10 +7,10 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 const ChartViewHeader = () => {
   return (
-    <div className="flex md:justify-between items-center">
+    <div className="flex md:justify-between items-center z-30">
       <div className="flex items-center gap-[15px]">
         {/* Token info */}
-        <div className="flex items-center gap-[8px]">
+        <div className="flex items-center gap-[8px] z-30">
           <Image
             src={"/images/tokens/beach-token.svg"}
             alt=""
@@ -27,14 +27,14 @@ const ChartViewHeader = () => {
         {/* Watch */}
         <button
           type="button"
-          className="flex gap-[10px] items-center bg-[#4A4A4ACC] h-max w-max  px-[10px] py-[5px] rounded-[4px]"
+          className="z-30 flex gap-[10px] items-center bg-[#4A4A4ACC] h-max w-max  px-[10px] py-[5px] rounded-[4px]"
         >
           <IoStarSharp color="#003CFF" size={15} />
           <p className="text-neutral-0">Watch</p>
         </button>
 
         {/* Token pair and social */}
-        <div className="flex items-center gap-[10px]">
+        <div className="flex items-center gap-[10px] z-30">
           {/* Token */}
           <div className="hidden sm:flex  items-center">
             <span className="flex items-center gap-[10px]">
@@ -59,14 +59,14 @@ const ChartViewHeader = () => {
           </div>
 
           {/* Socials */}
-          <span className="flex items-center gap-[10px]">
+          <span className="flex items-center gap-[10px] z-30">
             <PiTelegramLogoLight className="text-[#47A7FF]" size={23} />
             <RiTwitterXLine className="text-[#47A7FF]" size={20} />
           </span>
         </div>
       </div>
 
-      <div className="hidden md:flex items-center gap-[4px]">
+      <div className="hidden md:flex items-center gap-[4px] z-30">
         <p className="text-[#4A4A4A] text-[14px] font-chakra_Petch">
           Created By:
         </p>

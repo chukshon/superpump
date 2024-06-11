@@ -25,6 +25,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
+import Image from "next/image";
 const data: Payment[] = [
   {
     id: "m5gr84i9",
@@ -195,49 +196,51 @@ const TradeHistoryTable = () => {
     },
   });
   return (
-    <Table className="bg-transparent z-30">
-      {/* Table Header */}
-      <TableHeader className="bg-neutral-900 border-r-[0px] border-l-[0px] border-b-[1px] lg:border-l-[1px] lg:border-r-[1px] border-red-400 py-[10px]  px-[10px]">
-        {table.getHeaderGroups().map((headerGroup) => (
-          <TableRow key={headerGroup.id}>
-            {headerGroup.headers.map((header) => {
-              return (
-                <TableHead key={header.id} className="text-neutral-0">
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
-                </TableHead>
-              );
-            })}
-          </TableRow>
-        ))}
-      </TableHeader>
-      <TableBody className="bg-transparent text-neutral-0">
-        {table.getRowModel().rows?.length ? (
-          table.getRowModel().rows.map((row) => (
-            <TableRow
-              key={row.id}
-              data-state={row.getIsSelected() && "selected"}
-            >
-              {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id} className="p-2">
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </TableCell>
-              ))}
+    <div className="relative">
+      <Table className="z-30 relative">
+        {/* Table Header */}
+        <TableHeader className="bg-neutral-900 border-r-[0px] border-l-[0px] border-b-[1px] lg:border-l-[1px] lg:border-r-[1px] border-red-400 py-[10px]  px-[10px]">
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id}>
+              {headerGroup.headers.map((header) => {
+                return (
+                  <TableHead key={header.id} className="text-neutral-0">
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </TableHead>
+                );
+              })}
             </TableRow>
-          ))
-        ) : (
-          <TableRow>
-            <TableCell colSpan={columns.length} className="h-24 text-center">
-              No results.
-            </TableCell>
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
+          ))}
+        </TableHeader>
+        <TableBody className="bg-transparent text-neutral-0">
+          {table.getRowModel().rows?.length ? (
+            table.getRowModel().rows.map((row) => (
+              <TableRow
+                key={row.id}
+                data-state={row.getIsSelected() && "selected"}
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <TableCell key={cell.id} className="p-2">
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </TableCell>
+                ))}
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                No results.
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </div>
   );
 };
 
