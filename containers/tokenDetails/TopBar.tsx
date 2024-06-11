@@ -3,7 +3,7 @@ import { PiEyeBold } from "react-icons/pi";
 
 const TopBar = () => {
   return (
-    <div className="md:pl-[30px] border-b-[#828282] py-[10px] border-b-[1px]">
+    <div className="md:pl-[30px] border-b-[#828282] py-[10px] border-b-[1px] ">
       <div className="container  flex items-center gap-[10px] justify-between lg:justify-start md:gap-[30px]">
         <span className="text-neutral-0 flex items-center gap-[10px]">
           <PiEyeBold strokeWidth={3} size={18} />

@@ -195,9 +195,9 @@ const TradeHistoryTable = () => {
     },
   });
   return (
-    <Table className="bg-neutral-900">
+    <Table className="bg-transparent z-30">
       {/* Table Header */}
-      <TableHeader className="border-r-[0px] border-l-[0px] border-b-[1px] lg:border-l-[1px] lg:border-r-[1px] border-red-400 py-[10px]  px-[10px]">
+      <TableHeader className="bg-neutral-900 border-r-[0px] border-l-[0px] border-b-[1px] lg:border-l-[1px] lg:border-r-[1px] border-red-400 py-[10px]  px-[10px]">
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => {
@@ -215,7 +215,7 @@ const TradeHistoryTable = () => {
           </TableRow>
         ))}
       </TableHeader>
-      <TableBody className="bg-neutral-900 text-neutral-0">
+      <TableBody className="bg-transparent text-neutral-0">
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row) => (
             <TableRow
