@@ -7,10 +7,10 @@ import React from "react";
 
 const Desktop = () => {
   return (
-    <div className="hidden lg:block ">
+    <div className="hidden lg:block">
       <div className=" flex items-start mt-[30px] gap-[20px] container">
         {/* Chart Left Column */}
-        <div className="w-[70%] border-[1px] border-neutral-0 pt-[15px] pb-[40px]">
+        <div className=" w-[70%] border-[1px] border-b-[0px] border-neutral-0 pt-[15px] pb-[60px]">
           <ChartView />
         </div>
 
