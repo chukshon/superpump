@@ -7,7 +7,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 
 const ChartViewHeader = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex md:justify-between items-center">
       <div className="flex items-center gap-[15px]">
         {/* Token info */}
         <div className="flex items-center gap-[8px]">
@@ -36,23 +36,27 @@ const ChartViewHeader = () => {
         {/* Token pair and social */}
         <div className="flex items-center gap-[10px]">
           {/* Token */}
-          <span className="flex items-center gap-[10px]">
-            <p className="text-[#47A7FF] text-[15px] font-chakra_Petch">
-              Token
-            </p>
-            <AiFillCopy className="text-neutral-0" size={25} />
-          </span>
+          <div className="hidden sm:flex  items-center">
+            <span className="flex items-center gap-[10px]">
+              <p className="text-[#47A7FF] text-[15px] font-chakra_Petch">
+                Token
+              </p>
+              <AiFillCopy className="text-neutral-0" size={25} />
+            </span>
 
-          {/* Divider */}
-          <span className="bg-[#4A4A4A] w-[2px] h-[20px]"></span>
+            {/* Divider */}
+            <span className="bg-[#4A4A4A] w-[2px] h-[20px]"></span>
 
-          {/* Pair */}
-          <span className="flex items-center gap-[10px]">
-            <p className="text-[#47A7FF] text-[15px] font-chakra_Petch">Pair</p>
-            <AiFillCopy className="text-neutral-0" size={25} />
-          </span>
-          {/* Divider */}
-          <span className="bg-[#4A4A4A] w-[2px] h-[20px]"></span>
+            {/* Pair */}
+            <span className="flex items-center gap-[10px]">
+              <p className="text-[#47A7FF] text-[15px] font-chakra_Petch">
+                Pair
+              </p>
+              <AiFillCopy className="text-neutral-0" size={25} />
+            </span>
+            {/* Divider */}
+            <span className="bg-[#4A4A4A] w-[2px] h-[20px]"></span>
+          </div>
 
           {/* Socials */}
           <span className="flex items-center gap-[10px]">
@@ -62,7 +66,7 @@ const ChartViewHeader = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-[4px]">
+      <div className="hidden md:flex items-center gap-[4px]">
         <p className="text-[#4A4A4A] text-[14px] font-chakra_Petch">
           Created By:
         </p>

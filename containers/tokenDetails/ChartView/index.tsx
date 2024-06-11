@@ -12,7 +12,7 @@ const ChartView = () => {
       <div className="bg-neutral-200 min-h-[600px]"></div>
 
       {/* Table Tabs */}
-      <div className="py-[20px] px-[10px] bg-neutral-900 border-red-400 border-t-[1px] lg:border-l-[1px] lg:border-r-[1px]">
+      <div className="pt-[20px] px-[20px] bg-neutral-900 border-red-400 border-t-[1px] lg:border-l-[1px] lg:border-r-[1px]">
         <Tabs />
       </div>
 

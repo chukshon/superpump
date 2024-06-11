@@ -106,7 +106,7 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "timestamp",
     header: "TIMESTAMP",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("timestamp")}</div>
+      <div className="capitalize pl-[10px]">{row.getValue("timestamp")}</div>
     ),
   },
   {
@@ -118,14 +118,14 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "priceUsd",
     header: "PRICE USD",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("priceUsd")}</div>
+      <div className="capitalize min-w-[100px]">{row.getValue("priceUsd")}</div>
     ),
   },
   {
     accessorKey: "priceFtm",
     header: "PRICE FTM",
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("priceFtm")}</div>
+      <div className="capitalize min-w-[100px]">{row.getValue("priceFtm")}</div>
     ),
   },
   {
@@ -195,13 +195,9 @@ const TradeHistoryTable = () => {
     },
   });
   return (
-    <Table className="w-[100%] bg-neutral-900">
+    <Table className="bg-neutral-900">
       {/* Table Header */}
       <TableHeader className="border-r-[0px] border-l-[0px] border-b-[1px] lg:border-l-[1px] lg:border-r-[1px] border-red-400 py-[10px]  px-[10px]">
-        {/* Tabs */}
-        {/* <div className="my-[10px]">
-          <Tabs />
-        </div> */}
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => {

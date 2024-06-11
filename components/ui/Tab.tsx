@@ -12,11 +12,11 @@ const Tab = ({ tab, handleTabClick, isActive }: TabProps) => {
       onClick={() => handleTabClick(tab.value)}
       className={`${
         isActive
-          ? "text-neutral-0 bg-custom-radial2 py-[2px] px-[6px]"
-          : " py-[2px] px-[6px] text-neutral-0"
-      }`}
+          ? "text-neutral-0 bg-custom-radial2 py-[2px] px-[10px] w-[max-content] "
+          : " py-[2px] px-[10px] text-neutral-0"
+      } flex items-center`}
     >
-      <p className="text-[13px]">{tab.label}</p>
+      <p className="text-[12px] md:text-[13px] text-center">{tab.label}</p>
     </div>
   );
 };

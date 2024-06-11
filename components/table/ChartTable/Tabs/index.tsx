@@ -4,6 +4,7 @@ import Tab from "@/components/ui/Tab";
 import React from "react";
 
 const Tabs = () => {
+  type tabsT = "tradeHistory" | "holders" | "myPositions" | "topTraders";
   const TabsData = [
     {
       label: "Trade History",
@@ -23,12 +24,14 @@ const Tabs = () => {
     },
   ];
   const handleTabClick = (value: string) => {
-    console.log(value);
+    setSelectedTab(value as tabsT);
   };
-  const selectedTab = "tradeHistory";
+  const [selectedTab, setSelectedTab] = React.useState<tabsT | null>(
+    "tradeHistory"
+  );
 
   return (
-    <ul className="max-w-[700px] border-[1px] border-neutral-0 rounded-[5px] py-[5px] flex pl-[10px] items-center gap-[30px]">
+    <ul className="max-w-[700px] border-[1px] border-neutral-0 rounded-[5px] py-[5px] flex px-[10px] md:px-[20px] items-center gap-[10px] md:gap-[30px]">
       {TabsData.map((tab, index) => {
         return (
           <Tab
