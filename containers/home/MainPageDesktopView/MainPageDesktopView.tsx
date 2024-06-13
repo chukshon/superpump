@@ -1,6 +1,6 @@
 import React from "react";
 import QuickPortfolioSection from "../QuickPortfolioSection";
-import LeaderboardSection from "../LeaderboardSection";
+import LeaderboardSection from "../MarketUpdateSection";
 import LatestTransactionSection from "../LatestTransactionSection";
 import TokenList from "./TokenList";
 import ChatSection from "../ChatSection";

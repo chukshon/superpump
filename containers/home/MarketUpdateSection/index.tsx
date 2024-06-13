@@ -1,15 +1,15 @@
 import React from "react";
-import LeaderBoardItem from "./LeaderBoardItem";
+import MarketUpdateItem from "./MarketUpdateItem";
 
-const LeaderboardSection = () => {
+const MarketUpdateSection = () => {
   return (
     <div className="w-full lg:w-max">
       <h1 className="text-center text-[32px] font-[600] hidden lg:block">
-        LeaderBoard
+        MarketUpdateItem
       </h1>
-      <LeaderBoardItem />
+      <MarketUpdateItem />
     </div>
   );
 };
 
-export default LeaderboardSection;
+export default MarketUpdateSection;

@@ -3,7 +3,7 @@ import React from "react";
 import Tabs from "./Tabs";
 import QuickPortfolioSection from "../QuickPortfolioSection";
 import LatestTransactionSection from "../LatestTransactionSection";
-import LeaderboardSection from "../LeaderboardSection";
+import LeaderboardSection from "../MarketUpdateSection";
 import ChatSection from "../ChatSection";
 import SearchInput from "./SearchInput";
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
