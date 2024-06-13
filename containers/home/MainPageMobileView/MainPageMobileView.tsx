@@ -12,6 +12,7 @@ import TokenCardMobileView from "../MainPageDesktopView/TokenList/TokenCard/Toke
 
 const MainPageMobileView = () => {
   type tabsT = "superChat" | "portfolio" | "marketUpdate" | "latestTx";
+  type TokenListT = "launched" | "sale";
   const TabsData: { label: string; value: string }[] = [
     {
       label: "Super Chat",
@@ -90,6 +91,24 @@ const MainPageMobileView = () => {
   const handleTabClick = (value: string) => {
     setSelectedTab(value as tabsT);
   };
+
+  const [selectedTokenListTab, setSelectedTokenListTab] =
+    React.useState("launched");
+
+  const handleSwitchTab = (tab: TokenListT) => {
+    setSelectedTokenListTab(tab);
+  };
+
+  const TabData = [
+    {
+      label: "Launched",
+      value: "launched",
+    },
+    {
+      label: "Sale",
+      value: "sale",
+    },
+  ];
   return (
     <div className="block lg:hidden">
       {/* Tabs */}
@@ -133,8 +152,26 @@ const MainPageMobileView = () => {
         <SearchInput />
       </div>
 
+      {/* Selected Token Tab */}
+      <ul className="mt-[40px] w-full  px-[10px] flex gap-[10px] py-[10px]">
+        {TabData.map((tab, index) => {
+          return (
+            <button
+              key={index}
+              type="button"
+              onClick={() => handleSwitchTab(tab.value as TokenListT)}
+              className={`${
+                tab.value === selectedTokenListTab && "bg-[#26B6EA]"
+              }   py-[7px] flex items-center justify-center rounded-[5px] w-[50%] border-[1px] border-[#797A7C]`}
+            >
+              <p>{tab.label}</p>
+            </button>
+          );
+        })}
+      </ul>
+
       {/* Select */}
-      <div className="px-[10px] mt-[20px] ">
+      <div className="px-[10px] mt-[20px] w-full">
         <SelectVariantOne label="Sort:" />
       </div>
 

@@ -15,7 +15,7 @@ const SelectVariantOne = ({ label }: SelectVariantOneT) => {
   return (
     <div className="flex items-center gap-[10px]">
       <label className="">{label}</label>
-      <div className="">
+      <div className="w-full">
         <Select>
           <SelectTrigger className="max-w-[700px] text-[#828282] bg-[#191E23] border-none outline-none focus:border-none ">
             <SelectValue
