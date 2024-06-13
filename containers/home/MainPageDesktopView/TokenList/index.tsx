@@ -1,9 +1,11 @@
+"use client";
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import React from "react";
 import { TokenT } from "@/types";
 import TokenCard from "./TokenCard";
 
 const TokenList = () => {
+  type TokenListT = "launched" | "sale";
   const tokenList: TokenT[] = [
     {
       tokenName: "SUPERPUMP",
@@ -42,14 +44,51 @@ const TokenList = () => {
       tokenTicker: "$LORA",
     },
   ];
+
+  const [selectedTab, setSelectedTab] = React.useState("launched");
+
+  const handleSwitchTab = (tab: TokenListT) => {
+    setSelectedTab(tab);
+  };
+
+  const TabData = [
+    {
+      label: "Launched",
+      value: "launched",
+    },
+    {
+      label: "Sale",
+      value: "sale",
+    },
+  ];
   return (
     <div className="">
       {/* Top Action Bar */}
-      <div className=" border-[1px] border-neutral-0 rounded-[10px] flex  py-[10px] px-[10px] gap-[40px]">
-        <button className="w-[60%] rounded-[4px] bg-custom-radial py-[3px] px-[20px">
-          Create Token
-        </button>
-        <SelectVariantOne label="Sort:" />
+      <div className="gap-[50px] border-[1px] border-neutral-0 rounded-[10px] py-[10px] px-[10px] flex justify-between">
+        <ul className="w-full bg-neutral-900 border-[1px] border-[#797A7C] rounded-[5px] px-[10px] flex gap-[10px] py-[10px]">
+          {TabData.map((tab, index) => {
+            return (
+              <button
+                key={index}
+                type="button"
+                onClick={() => handleSwitchTab(tab.value as TokenListT)}
+                className={`${
+                  tab.value === selectedTab && "bg-[#26B6EA]"
+                }   py-[7px] flex items-center justify-center rounded-[5px] w-[50%] border-[1px] border-[#797A7C]`}
+              >
+                <p>{tab.label}</p>
+              </button>
+            );
+          })}
+        </ul>
+        <div className="flex w-full items-center gap-[10px]">
+          <button className="border-[1px] border-neutral-0 w-[50%] rounded-[4px] bg-custom-radial py-[10px] px-[20px">
+            Create Token
+          </button>
+          <div className="w-[50%] flex items-center">
+            <SelectVariantOne label="Sort:" />
+          </div>
+        </div>
       </div>
 
       {/* Token List */}
