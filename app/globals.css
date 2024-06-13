@@ -149,4 +149,8 @@
     backdrop-filter: blur(4px);
     /* Adjust the blur value as needed */
   }
+
+  .nav-bg-gradient {
+    @apply bg-gradient-to-b from-[#1B488B] to-[#111111];
+  }
 }
