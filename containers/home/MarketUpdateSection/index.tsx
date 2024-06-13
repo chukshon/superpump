@@ -5,7 +5,7 @@ const MarketUpdateSection = () => {
   return (
     <div className="w-full lg:w-max">
       <h1 className="text-center text-[32px] font-[600] hidden lg:block">
-        MarketUpdateItem
+        Market Update
       </h1>
       <MarketUpdateItem />
     </div>

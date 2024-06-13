@@ -4,7 +4,7 @@ import QuickPortfolioCard from "./QuickPortfolioCard";
 const QuickPortfolioSection = () => {
   return (
     <div className="w-full lg:w-max">
-      <h1 className="text-center text-[32px] font-[600] hidden lg:inline-block">
+      <h1 className="text-center text-[32px] font-[600] hidden lg:block">
         Quick Portfolio
       </h1>
 
