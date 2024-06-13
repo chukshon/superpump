@@ -29,11 +29,10 @@ const MarketUpdateItem = () => {
 
   switch (selectedTab) {
     case "gainers":
-      bgColor = "bg-[#F6465D]";
+      bgColor = "bg-[#0ECB81]";
       break;
     case "losers":
-      bgColor = "bg-[#0ECB81]";
-
+      bgColor = "bg-[#F6465D]";
       break;
   }
 
