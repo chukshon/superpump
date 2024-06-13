@@ -11,7 +11,7 @@ import { TokenT } from "@/types";
 import TokenCardMobileView from "../MainPageDesktopView/TokenList/TokenCard/TokenCardMobileView";
 
 const MainPageMobileView = () => {
-  type tabsT = "superChat" | "portfolio" | "leaderboards" | "latestTx";
+  type tabsT = "superChat" | "portfolio" | "marketUpdate" | "latestTx";
   const TabsData: { label: string; value: string }[] = [
     {
       label: "Super Chat",
@@ -22,8 +22,8 @@ const MainPageMobileView = () => {
       value: "portfolio",
     },
     {
-      label: "Leaderbords",
-      value: "leaderboards",
+      label: "Market Update",
+      value: "marketUpdate",
     },
     {
       label: "latest Txs",
@@ -80,7 +80,7 @@ const MainPageMobileView = () => {
         return <ChatSection />;
       case "portfolio":
         return <QuickPortfolioSection />;
-      case "leaderboards":
+      case "marketUpdate":
         return <LeaderboardSection />;
       case "latestTx":
         return <LatestTransactionSection />;
