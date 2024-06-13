@@ -53,8 +53,8 @@ const TokenList = () => {
 
   const TabData = [
     {
-      label: "Launched",
-      value: "launched",
+      label: "LAUNCHED",
+      value: "SALE",
     },
     {
       label: "Sale",

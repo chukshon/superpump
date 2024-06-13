@@ -101,11 +101,11 @@ const MainPageMobileView = () => {
 
   const TabData = [
     {
-      label: "Launched",
+      label: "LAUNCHED",
       value: "launched",
     },
     {
-      label: "Sale",
+      label: "SALE",
       value: "sale",
     },
   ];
@@ -153,7 +153,7 @@ const MainPageMobileView = () => {
       </div>
 
       {/* Selected Token Tab */}
-      <ul className="mt-[40px] w-full  px-[10px] flex gap-[10px] py-[10px]">
+      <ul className="mt-[20px] w-full  px-[10px] flex gap-[10px] py-[10px]">
         {TabData.map((tab, index) => {
           return (
             <button
