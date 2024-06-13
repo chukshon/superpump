@@ -54,7 +54,7 @@ const TokenList = () => {
   const TabData = [
     {
       label: "LAUNCHED",
-      value: "SALE",
+      value: "launched",
     },
     {
       label: "Sale",
