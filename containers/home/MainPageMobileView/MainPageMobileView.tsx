@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
-import Tabs from "./Tabs";
-import QuickPortfolioSection from "../QuickPortfolioSection";
-import LatestTransactionSection from "../LatestTransactionSection";
-import LeaderboardSection from "../MarketUpdateSection";
-import ChatSection from "../ChatSection";
-import SearchInput from "./SearchInput";
+import Tabs from "../components/Tabs";
+import QuickPortfolioSection from "../components/QuickPortfolioSection";
+import LatestTransactionSection from "../components/LatestTransactionSection";
+import LeaderboardSection from "../components/MarketUpdateSection";
+import ChatSection from "../components/ChatSection";
+import SearchInput from "../components/MobileSearchInput";
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import { TokenT } from "@/types";
-import TokenCardMobileView from "../MainPageDesktopView/TokenList/TokenCard/TokenCardMobileView";
+import TokenCardMobileView from "../components/TokenList/TokenCard/TokenCardMobileView";
 
 const MainPageMobileView = () => {
   type tabsT = "superChat" | "portfolio" | "marketUpdate" | "latestTx";

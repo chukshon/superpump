@@ -1,9 +1,9 @@
 import React from "react";
-import QuickPortfolioSection from "../QuickPortfolioSection";
-import LeaderboardSection from "../MarketUpdateSection";
-import LatestTransactionSection from "../LatestTransactionSection";
-import TokenList from "./TokenList";
-import ChatSection from "../ChatSection";
+import QuickPortfolioSection from "../components/QuickPortfolioSection";
+import LeaderboardSection from "../components/MarketUpdateSection";
+import LatestTransactionSection from "../components/LatestTransactionSection";
+import TokenList from "../components/TokenList";
+import ChatSection from "../components/ChatSection";
 
 const MainPageDesktopView = () => {
   return (

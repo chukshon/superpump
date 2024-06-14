@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const SearchInput = () => {
+const MobileSearchInput = () => {
   return (
     <div className="rounded-[10px] relative border-[1px] py-[15px] px-[10px] w-[100%] flex items-center gap-[10px]">
       <input
@@ -16,4 +16,4 @@ const SearchInput = () => {
   );
 };
 
-export default SearchInput;
+export default MobileSearchInput;

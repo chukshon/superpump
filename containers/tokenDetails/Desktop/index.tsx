@@ -1,4 +1,4 @@
-import ChatSection from "@/containers/home/ChatSection";
+import ChatSection from "@/containers/home/components/ChatSection";
 import ChartView from "@/containers/tokenDetails/ChartView";
 import TopBar from "@/containers/tokenDetails/TopBar";
 import TradeDetailsBox from "@/containers/tokenDetails/TradeDetailsBox";
