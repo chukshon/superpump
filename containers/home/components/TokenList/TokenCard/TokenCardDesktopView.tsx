@@ -2,6 +2,7 @@ import React from "react";
 import { TokenT } from "@/types";
 import Image from "next/image";
 import TokenIcon from "./TokenIcon";
+import Link from "next/link";
 
 export interface TokenCardProps extends TokenT {
   index: number;
@@ -10,7 +11,7 @@ export interface TokenCardProps extends TokenT {
 const TokenCardDesktopView = (props: TokenCardProps) => {
   const isEven = (props.index + 1) % 2 === 0;
   return (
-    <>
+    <Link href={"/token/2"} type="button">
       {!isEven ? (
         <div className="hidden lg:block bg-[url('/images/tokencardbgodd-desktop.svg')] h-[200px] min-w-[420px] object-contain bg-no-repeat relative">
           <div className="absolute top-[15%] left-[-50px]">
@@ -95,7 +96,7 @@ const TokenCardDesktopView = (props: TokenCardProps) => {
           </div>
         </div>
       )}
-    </>
+    </Link>
   );
 };
 

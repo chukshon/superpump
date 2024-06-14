@@ -2,13 +2,14 @@ import React from "react";
 import { TokenT } from "@/types";
 import Image from "next/image";
 import TokenIcon from "./TokenIcon";
+import Link from "next/link";
 
 export interface TokenCardProps extends TokenT {
   index: number;
 }
 const TokenCardMobileView = (props: TokenCardProps) => {
   return (
-    <>
+    <Link href={"/token/2"} type="button">
       <div className="mb-[60px] lg:mb-[0px] lg:hidden bg-[url('/images/token-card-rectangle-mobile.svg')] object-contain bg-no-repeat relative w-[305px] min-h-[200px]">
         <div className="absolute top-[-70px] left-[100px]">
           <TokenIcon image={props.tokenIcon} />
@@ -26,7 +27,7 @@ const TokenCardMobileView = (props: TokenCardProps) => {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
