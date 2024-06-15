@@ -3,18 +3,6 @@
 import React from "react";
 import UnionBorderContainer from "@/components/ui/UnionBorderContainer";
 import { DefaultTable } from "@/components/table/DefaultTable/DefaultTable";
-
-import {
-  ColumnDef,
-  SortingState,
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import { HiChevronUpDown } from "react-icons/hi2";
 import useMarketUpdate from "./useMarketUpdate";
 
 const MarketUpdateItem = () => {
@@ -26,6 +14,7 @@ const MarketUpdateItem = () => {
     handleSwitchTab,
     selectedTab,
   } = useMarketUpdate();
+
   type MarketUpdateT = "gainers" | "losers";
 
   return (
