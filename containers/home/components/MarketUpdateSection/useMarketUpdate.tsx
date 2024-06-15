@@ -51,70 +51,119 @@ export type QuickPortfolioDataT = {
   hourChange: number;
 };
 
-export const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
-  {
-    accessorKey: "token",
-    header: ({ column }) => {
-      return (
-        <button
-          type="button"
-          className="flex items-center"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Token
-          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
-        </button>
-      );
-    },
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("token")}</div>
-    ),
-  },
-  {
-    accessorKey: "price",
-    header: ({ column }) => {
-      return (
-        <button
-          type="button"
-          className="flex items-center"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Price
-          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
-        </button>
-      );
-    },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("price")}</div>,
-  },
-  {
-    accessorKey: "hourChange",
-    header: ({ column }) => {
-      return (
-        <button
-          type="button"
-          className="flex items-center"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          24H CHANGE
-          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
-        </button>
-      );
-    },
-    cell: ({ row }) => {
-      return (
-        <button
-          type="button"
-          className="w-full max-w-[150px] flex items-center justify-center bg-[#F6465D]  h-[30px] rounded-[4px]"
-        >
-          {row.getValue("hourChange")}%
-        </button>
-      );
-    },
-  },
-];
-
 function useMarketUpdate() {
-  return { QuickPortfolioTableData, QuickPortfolioTablecolumns };
+  type MarketUpdateT = "gainers" | "losers";
+
+  const TabData = [
+    {
+      label: "Gainers",
+      value: "gainers",
+    },
+    {
+      label: "Losers",
+      value: "losers",
+    },
+  ];
+
+  const [selectedTab, setSelectedTab] = React.useState("gainers");
+
+  const handleSwitchTab = (tab: MarketUpdateT) => {
+    setSelectedTab(tab);
+  };
+
+  let color = "";
+
+  switch (selectedTab) {
+    case "gainers":
+      color = "#0ECB81";
+      break;
+    case "losers":
+      color = "#F6465D";
+      break;
+  }
+  const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
+    {
+      accessorKey: "token",
+      header: ({ column }) => {
+        return (
+          <button
+            type="button"
+            className="flex items-center"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Token
+            <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+          </button>
+        );
+      },
+      cell: ({ row }) => (
+        <div
+          className={` uppercase ${
+            selectedTab === "gainers" ? "text-[#0ECB81]" : "text-[#F6465D]"
+          }`}
+        >
+          {row.getValue("token")}
+        </div>
+      ),
+    },
+    {
+      accessorKey: "price",
+      header: ({ column }) => {
+        return (
+          <button
+            type="button"
+            className="flex items-center"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            Price
+            <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+          </button>
+        );
+      },
+      cell: ({ row }) => (
+        <div
+          className={`${
+            selectedTab === "gainers" ? "text-[#0ECB81]" : "text-[#F6465D]"
+          }`}
+        >
+          {row.getValue("price")}
+        </div>
+      ),
+    },
+    {
+      accessorKey: "hourChange",
+      header: ({ column }) => {
+        return (
+          <button
+            type="button"
+            className="flex items-center"
+            onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          >
+            24H CHANGE
+            <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+          </button>
+        );
+      },
+      cell: ({ row }) => {
+        return (
+          <button
+            type="button"
+            className={`w-full max-w-[150px] flex items-center justify-center bg-[${color}]  h-[30px] rounded-[4px]`}
+          >
+            {row.getValue("hourChange")}%
+          </button>
+        );
+      },
+    },
+  ];
+  return {
+    QuickPortfolioTableData,
+    QuickPortfolioTablecolumns,
+    TabData,
+    color,
+    handleSwitchTab,
+    selectedTab,
+  };
 }
 
 export default useMarketUpdate;
