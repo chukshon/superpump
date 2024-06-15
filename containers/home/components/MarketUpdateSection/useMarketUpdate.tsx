@@ -11,7 +11,7 @@ import {
 } from "@tanstack/react-table";
 import { HiChevronUpDown } from "react-icons/hi2";
 
-const QuickPortfolioTableData: QuickPortfolioDataT[] = [
+const MarketUpdateData: MarketUpdateT[] = [
   {
     id: "m5gr84i9",
     token: "Link/Eth",
@@ -44,7 +44,7 @@ const QuickPortfolioTableData: QuickPortfolioDataT[] = [
   },
 ];
 
-export type QuickPortfolioDataT = {
+export type MarketUpdateT = {
   id: string;
   token: string;
   price: number;
@@ -81,7 +81,7 @@ function useMarketUpdate() {
       color = "#F6465D";
       break;
   }
-  const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
+  const MarketUpdateColumn: ColumnDef<MarketUpdateT>[] = [
     {
       accessorKey: "token",
       header: ({ column }) => {
@@ -156,9 +156,10 @@ function useMarketUpdate() {
       },
     },
   ];
+
   return {
-    QuickPortfolioTableData,
-    QuickPortfolioTablecolumns,
+    MarketUpdateData,
+    MarketUpdateColumn,
     TabData,
     color,
     handleSwitchTab,
