@@ -79,7 +79,12 @@ function useLatestTransactionSection() {
           </button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("timeStamp")}</div>,
+      cell: ({ row }) => (
+        <div className="">
+          <p>May 22</p>
+          <p>10:24:56 AM</p>
+        </div>
+      ),
     },
     {
       accessorKey: "tx",
@@ -95,7 +100,15 @@ function useLatestTransactionSection() {
           </button>
         );
       },
-      cell: ({ row }) => <div>{row.getValue("tx")}</div>,
+      cell: ({ row }) => (
+        <div
+          className={`font-[700] text-[15px] text-center ${
+            row.getValue("tx") === "buy" ? "text-[#0ECB81]" : "text-[#F6465D]"
+          }`}
+        >
+          {row.getValue("tx") === "buy" ? "B" : "S"}
+        </div>
+      ),
     },
 
     {
