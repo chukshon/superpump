@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  ColumnDef,
-  SortingState,
-  flexRender,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
+import { ColumnDef } from "@tanstack/react-table";
 import { HiChevronUpDown } from "react-icons/hi2";
 
 const MarketUpdateData: MarketUpdateT[] = [
