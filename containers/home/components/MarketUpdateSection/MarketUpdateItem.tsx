@@ -21,31 +21,31 @@ const QuickPortfolioTableData: QuickPortfolioDataT[] = [
     id: "m5gr84i9",
     token: "Link/Eth",
     price: 3122.3,
-    pnl: 122.5,
+    hourChange: -122.5,
   },
   {
     id: "3u1reuv4",
     token: "Bonk/Sol",
     price: 3122.3,
-    pnl: 122.5,
+    hourChange: -122.5,
   },
   {
     id: "derv1ws0",
     token: "Link/Eth",
     price: 3122.3,
-    pnl: 122.5,
+    hourChange: -122.5,
   },
   {
     id: "derv2ws0",
     token: "Link/Eth",
     price: 3122.3,
-    pnl: 122.5,
+    hourChange: -122.5,
   },
   {
     id: "derv5ws0",
     token: "Link/Eth",
     price: 3122.3,
-    pnl: 122.5,
+    hourChange: -122.5,
   },
 ];
 
@@ -53,7 +53,7 @@ export type QuickPortfolioDataT = {
   id: string;
   token: string;
   price: number;
-  pnl: number;
+  hourChange: number;
 };
 
 export const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
@@ -92,7 +92,7 @@ export const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
     cell: ({ row }) => <div className="lowercase">{row.getValue("price")}</div>,
   },
   {
-    accessorKey: "pnl",
+    accessorKey: "hourChange",
     header: ({ column }) => {
       return (
         <button
@@ -100,28 +100,19 @@ export const QuickPortfolioTablecolumns: ColumnDef<QuickPortfolioDataT>[] = [
           className="flex items-center"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Pnl
+          24H CHANGE
           <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
         </button>
       );
     },
     cell: ({ row }) => {
-      return <div className="font-medium">{row.getValue("pnl")}</div>;
-    },
-  },
-  {
-    accessorKey: "action",
-    header: "Action",
-    cell: ({ row }) => {
       return (
-        <ul className="text-right font-medium uppercase flex items-center gap-[10px]">
-          <li className="flex items-center justify-center bg-[#0ECB81] w-[24px] h-[25px] rounded-[4px]">
-            B
-          </li>
-          <li className="flex items-center justify-center bg-[#F6465D] w-[24px] h-[25px] rounded-[4px]">
-            S
-          </li>
-        </ul>
+        <button
+          type="button"
+          className="w-full max-w-[150px] flex items-center justify-center bg-[#F6465D]  h-[30px] rounded-[4px]"
+        >
+          {row.getValue("hourChange")}%
+        </button>
       );
     },
   },

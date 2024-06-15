@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import UnionBorderContainer from "@/components/ui/UnionBorderContainer";
 import { DefaultTable } from "@/components/table/DefaultTable/DefaultTable";
