@@ -18,37 +18,15 @@ import { HiChevronUpDown } from "react-icons/hi2";
 import useMarketUpdate from "./useMarketUpdate";
 
 const MarketUpdateItem = () => {
-  const { QuickPortfolioTablecolumns, QuickPortfolioTableData } =
-    useMarketUpdate();
+  const {
+    QuickPortfolioTablecolumns,
+    QuickPortfolioTableData,
+    TabData,
+    color,
+    handleSwitchTab,
+    selectedTab,
+  } = useMarketUpdate();
   type MarketUpdateT = "gainers" | "losers";
-
-  const TabData = [
-    {
-      label: "Gainers",
-      value: "gainers",
-    },
-    {
-      label: "Losers",
-      value: "losers",
-    },
-  ];
-
-  const [selectedTab, setSelectedTab] = React.useState("gainers");
-
-  const handleSwitchTab = (tab: MarketUpdateT) => {
-    setSelectedTab(tab);
-  };
-
-  let bgColor = "";
-
-  switch (selectedTab) {
-    case "gainers":
-      bgColor = "bg-[#0ECB81]";
-      break;
-    case "losers":
-      bgColor = "bg-[#F6465D]";
-      break;
-  }
 
   return (
     <UnionBorderContainer>
@@ -61,7 +39,7 @@ const MarketUpdateItem = () => {
               type="button"
               onClick={() => handleSwitchTab(tab.value as MarketUpdateT)}
               className={`${
-                tab.value === selectedTab && bgColor
+                tab.value === selectedTab && `bg-[${color}]`
               }   py-[7px] flex items-center justify-center rounded-[5px] w-[50%] border-[1px] border-[#797A7C]`}
             >
               <p>{tab.label}</p>
@@ -70,10 +48,12 @@ const MarketUpdateItem = () => {
         })}
       </ul>
       {/* Table */}
-      <DefaultTable
-        columns={QuickPortfolioTablecolumns}
-        data={QuickPortfolioTableData}
-      />
+      <div className="mt-[10px]">
+        <DefaultTable
+          columns={QuickPortfolioTablecolumns}
+          data={QuickPortfolioTableData}
+        />
+      </div>
     </UnionBorderContainer>
   );
 };
