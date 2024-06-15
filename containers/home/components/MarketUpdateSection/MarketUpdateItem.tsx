@@ -7,8 +7,8 @@ import useMarketUpdate from "./useMarketUpdate";
 
 const MarketUpdateItem = () => {
   const {
-    QuickPortfolioTablecolumns,
-    QuickPortfolioTableData,
+    MarketUpdateData,
+    MarketUpdateColumn,
     TabData,
     color,
     handleSwitchTab,
@@ -38,10 +38,7 @@ const MarketUpdateItem = () => {
       </ul>
       {/* Table */}
       <div className="mt-[10px]">
-        <DefaultTable
-          columns={QuickPortfolioTablecolumns}
-          data={QuickPortfolioTableData}
-        />
+        <DefaultTable columns={MarketUpdateColumn} data={MarketUpdateData} />
       </div>
     </UnionBorderContainer>
   );
