@@ -3,9 +3,7 @@
 import * as React from "react";
 import {
   ColumnDef,
-  ColumnFiltersState,
   SortingState,
-  VisibilityState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -13,9 +11,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
+import { HiChevronUpDown } from "react-icons/hi2";
 
 import {
   Table,
@@ -26,122 +22,143 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const data: Payment[] = [
+const data: QuickPortfolioDataT[] = [
   {
     id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@yahoo.com",
+    token: "Link/Eth",
+    price: 3122.3,
+    pnl: 122.5,
   },
   {
     id: "3u1reuv4",
-    amount: 242,
-    status: "success",
-    email: "Abe45@gmail.com",
+    token: "Bonk/Sol",
+    price: 3122.3,
+    pnl: 122.5,
   },
   {
     id: "derv1ws0",
-    amount: 837,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
+    token: "Link/Eth",
+    price: 3122.3,
+    pnl: 122.5,
   },
   {
     id: "derv2ws0",
-    amount: 839,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
+    token: "Link/Eth",
+    price: 3122.3,
+    pnl: 122.5,
   },
   {
     id: "derv5ws0",
-    amount: 537,
-    status: "processing",
-    email: "Monserrat44@gmail.com",
+    token: "Link/Eth",
+    price: 3122.3,
+    pnl: 122.5,
   },
 ];
 
-export type Payment = {
+export type QuickPortfolioDataT = {
   id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
+  token: string;
+  price: number;
+  pnl: number;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<QuickPortfolioDataT>[] = [
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "token",
+    header: ({ column }) => {
+      return (
+        <button
+          type="button"
+          className="flex items-center"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Token
+          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+        </button>
+      );
+    },
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
+      <div className="capitalize">{row.getValue("token")}</div>
     ),
   },
   {
-    accessorKey: "email",
+    accessorKey: "price",
     header: ({ column }) => {
       return (
-        <Button
-          variant="ghost"
+        <button
+          type="button"
+          className="flex items-center"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Email
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
+          Price
+          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+        </button>
       );
     },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
+    cell: ({ row }) => <div className="lowercase">{row.getValue("price")}</div>,
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    accessorKey: "pnl",
+    header: ({ column }) => {
+      return (
+        <button
+          type="button"
+          className="flex items-center"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Pnl
+          <HiChevronUpDown className="h-4 w-4" size={20} strokeWidth={1.5} />
+        </button>
+      );
+    },
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-
-      // Format the amount as a dollar amount
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
-
-      return <div className="text-right font-medium">{formatted}</div>;
+      return <div className="font-medium">{row.getValue("pnl")}</div>;
+    },
+  },
+  {
+    accessorKey: "action",
+    header: "Action",
+    cell: ({ row }) => {
+      return (
+        <ul className="text-right font-medium uppercase flex items-center gap-[10px]">
+          <li className="flex items-center justify-center bg-[#0ECB81] w-[24px] h-[25px] rounded-[4px]">
+            B
+          </li>
+          <li className="flex items-center justify-center bg-[#F6465D] w-[24px] h-[25px] rounded-[4px]">
+            S
+          </li>
+        </ul>
+      );
     },
   },
 ];
 
 export function DefaultTable() {
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  );
-  const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({});
-  const [rowSelection, setRowSelection] = React.useState({});
-
   const table = useReactTable({
     data,
     columns,
     onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    onColumnVisibilityChange: setColumnVisibility,
-    onRowSelectionChange: setRowSelection,
     state: {
       sorting,
-      columnFilters,
-      columnVisibility,
-      rowSelection,
     },
   });
 
   return (
-    <Table className="rounded-[10px] border-[1.5px] border-[#3B3B3B]">
-      <TableHeader className="bg-neutral-900 text-neutral-0 border-b-[1.5px] border-[#3B3B3B]">
+    <Table className="border-[1.5px] border-[#3B3B3B] rounded-tl-[10px] rounded-tr-[10px]">
+      <TableHeader className=" bg-neutral-900 text-neutral-0 border-b-[1.5px] border-[#3B3B3B]">
         {table.getHeaderGroups().map((headerGroup) => (
-          <TableRow key={headerGroup.id}>
+          <TableRow
+            key={headerGroup.id}
+            className="rounded-tl-[10px] rounded-tr-[10px]"
+          >
             {headerGroup.headers.map((header) => {
               return (
-                <TableHead key={header.id} className="text-neutral-0 ">
+                <TableHead key={header.id} className=" text-neutral-0 py-[5px]">
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -154,11 +171,11 @@ export function DefaultTable() {
           </TableRow>
         ))}
       </TableHeader>
-      <TableBody className="bg-[#111111] px-[10px] ">
+      <TableBody className="bg-[#111111] px-[10px] py-[10px] ">
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row) => (
             <TableRow
-              className="border-b-[1px] border-neutral-0"
+              className="border-b-[1px] border-neutral-0 py-[20px]"
               key={row.id}
               data-state={row.getIsSelected() && "selected"}
             >
