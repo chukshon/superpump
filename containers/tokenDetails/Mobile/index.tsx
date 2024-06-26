@@ -26,11 +26,11 @@ const Mobile = () => {
       </div>
 
       {/* Chart Table */}
-      <div className="pb-[50px]">
+      <div className="pb-[70px]">
         <TradeHistoryTable />
       </div>
 
-      {/* Floating Buy/sell panel */}
+      {/* Floating Footer  panel */}
       <div className="fixed bottom-[0px] z-40 w-full">
         {/* Buy and sell Section */}
         {showFloatingBar && (
