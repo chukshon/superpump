@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import TradeDetailsBox from "../TradeDetailsBox";
 import ChartViewHeader from "../ChartView/ChartViewHeader";
@@ -24,22 +26,39 @@ const Mobile = () => {
       </div>
 
       {/* Chart Table */}
-      <div className="">
+      <div className="pb-[50px]">
         <TradeHistoryTable />
       </div>
 
       {/* Floating Buy/sell panel */}
       <div className="fixed bottom-[0px] z-40 w-full">
         {/* Buy and sell Section */}
-        <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-red-500 px-[30px] bg-neutral-900 py-[30px]">
-          <TradeItem />
-        </div>
+        {showFloatingBar && (
+          <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-red-500 px-[30px] bg-neutral-900 py-[30px]">
+            <TradeItem />
+          </div>
+        )}
 
         {/* Footer */}
         <div className="border-t-[2px] border-red-500 bg-neutral-900 flex justify-between">
-          <FooterTab title="Buy" />
-          <FooterTab title="Sell" />
-          <FooterTab title="Chat" />
+          <FooterTab
+            title="Buy"
+            handleClick={() => {
+              setShowFloatingBar(!showFloatingBar);
+            }}
+          />
+          <FooterTab
+            title="Sell"
+            handleClick={() => {
+              setShowFloatingBar(!showFloatingBar);
+            }}
+          />
+          <FooterTab
+            title="Chat"
+            handleClick={() => {
+              setShowFloatingBar(!showFloatingBar);
+            }}
+          />
         </div>
       </div>
     </div>

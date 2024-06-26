@@ -16,7 +16,7 @@ const TradeItem = () => {
         </li>
       </ul>
 
-      <div className="border-[1px] border-neutral-0 rounded-bl-[5px] rounded-br-[5px] py-[20px] px-[30px]">
+      <div className="border-[1px] border-neutral-0 rounded-bl-[5px] rounded-br-[5px] py-[20px] px-[10px]">
         <BuySection />
       </div>
     </div>
