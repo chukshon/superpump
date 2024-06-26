@@ -5,7 +5,7 @@ import BuySection from "./BuySection";
 
 const TradeItem = () => {
   return (
-    <div>
+    <div className="">
       {/* Buy and sell Tab */}
       <ul className="flex">
         <li className="flex items-center justify-center w-[50%] py-[10px] bg-red-500 rounded-tl-[5px] rounded-tr-[5px]">

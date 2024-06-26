@@ -1,9 +1,5 @@
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
 import MainPageDesktopView from "@/containers/home/MainPageDesktopView/MainPageDesktopView";
 import MainPageMobileView from "@/containers/home/MainPageMobileView/MainPageMobileView";
-import QuickPortfolioSection from "@/containers/home/components/QuickPortfolioSection";
-import Image from "next/image";
 
 export default function Home() {
   return (
