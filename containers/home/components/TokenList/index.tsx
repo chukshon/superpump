@@ -3,8 +3,11 @@ import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import React from "react";
 import { TokenT } from "@/types";
 import TokenCard from "./TokenCard";
+import { useModalContext } from "@/context/ModalContext";
+import CreateTokenModal from "@/components/Modals/CreateTokenModal";
 
 const TokenList = () => {
+  const { showModal } = useModalContext();
   type TokenListT = "launched" | "sale";
   const tokenList: TokenT[] = [
     {
@@ -82,7 +85,13 @@ const TokenList = () => {
           })}
         </ul>
         <div className="flex w-full items-center gap-[10px]">
-          <button className="border-[1px] border-neutral-0 w-[50%] rounded-[4px] bg-custom-radial py-[10px] px-[20px">
+          <button
+            type="button"
+            onClick={() => {
+              showModal(<CreateTokenModal />);
+            }}
+            className="border-[1px] border-neutral-0 w-[50%] rounded-[4px] bg-custom-radial py-[10px] px-[20px"
+          >
             Create Token
           </button>
           <div className="w-[50%] flex items-center">

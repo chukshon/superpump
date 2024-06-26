@@ -1,3 +1,4 @@
+"use client";
 import React, { useContext, useState } from "react";
 
 const DEFAULT_CONTEXT_VALUE = {
