@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useModalContext } from "@/context/ModalContext";
-import { X } from "lucide-react";
+import Image from "next/image";
+import DefaultModalHeader from "./DefaultModalHeader";
 
 // Use this modal if you don't want it to be responsive(i.e it retains the same desktop modal design on both desktop and mobile screens), search for the promptModal component for reference on how this was used
 export interface ModalProps {
@@ -36,7 +37,7 @@ const Modal = ({
       >
         <motion.div
           style={{ width: `${width}px` }}
-          className="overflow-hidden rounded-[10px] md:max-w-[1000px]"
+          className="bg-neutral-900 backdrop-blur-[10px] overflow-hidden rounded-[10px] md:max-w-[1000px]  border-[1px] border-neutral-0"
           onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
             e.stopPropagation()
           }
@@ -62,26 +63,13 @@ const Modal = ({
           }}
         >
           {!!modalHeaderTitle && (
-            <div className="flex items-center justify-between bg-purple-400 px-[15px] py-[15px]">
-              <h3 className="font-sora font-bold text-neutral-0">
-                {modalHeaderTitle}
-              </h3>
-              <button
-                type="button"
-                className="disabled:pointer-events-none"
-                disabled={isLoading}
-              >
-                <X
-                  size={20}
-                  strokeWidth={2}
-                  className="cursor-pointer text-neutral-0"
-                  onClick={hideModal}
-                />
-              </button>
-            </div>
+            <DefaultModalHeader
+              modalHeaderTitle={modalHeaderTitle}
+              handleCloseModal={hideModal}
+            />
           )}
 
-          <div className="shadow-[0px_0px_10px_rgba(0, 0, 0, 0.1)] h-[100%] max-h-[500px] w-[100%] bg-neutral-0">
+          <div className="shadow-[0px_0px_10px_rgba(0, 0, 0, 0.1)] h-[100%] max-h-[500px] w-[100%] ">
             {children}
           </div>
         </motion.div>
