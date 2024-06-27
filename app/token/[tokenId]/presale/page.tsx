@@ -1,4 +1,5 @@
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
+import PresaleCard from "@/containers/presale/PresaleCard";
 import PresaleFilterTopBar from "@/containers/presale/PresaleFilterTopBar";
 import React from "react";
 
@@ -72,9 +73,9 @@ const Presale = () => {
         <PresaleFilterTopBar />
 
         {/* Presale List */}
-        <ul>
+        <ul className="mt-[20px] gap-x-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 place-items-center">
           {PRESALE_LIST_DATA.map((presaleItem) => {
-            return <li>Presale Item</li>;
+            return <PresaleCard key={presaleItem.id} />;
           })}
         </ul>
       </div>
