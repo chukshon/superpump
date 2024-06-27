@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import PresaleStatus from "./PresaleStatus";
+import TwitterIcon from "@/components/Icons/TwitterIcon";
+import TelegramIcon from "@/components/Icons/TelegramIcon";
+import ProgressBar from "@/components/ui/ProgressBar";
 
 type PresaleCardProps = {
   id: string;
@@ -34,10 +37,46 @@ const PresaleCard = (props: PresaleCardProps) => {
 
           <PresaleStatus status={props.status} />
         </div>
-        <span>
-          <h2>Pope Pepe</h2>
-          <div></div>
+
+        {/* Title and socials */}
+        <span className="flex justify-between items-center mt-[10px]">
+          <h1 className="text-neutral-0 text-[24px]">{props.name}</h1>
+          <div className="flex items-center gap-[10px]">
+            <TwitterIcon />
+            <TelegramIcon />
+          </div>
         </span>
+        {/* Type of presale */}
+        <p className="text-[#7C7C7C] text-[12px]">
+          Fair Launch - Max buy 150 FTM
+        </p>
+        {/* Divider */}
+        <span className="block h-[1px] w-full bg-[#293C4D] my-[20px]"></span>
+
+        {/* SoftCap Details */}
+        <div>
+          <p className="text-neutral-0 text-[14px]">SoftCap</p>
+          <h3 className="text-[#26B6EA] text-[16px] font-[700]">1,000 FTM</h3>
+        </div>
+
+        {/* Progress */}
+        <div>
+          <span className="flex items-center gap-[10px]">
+            <h4 className="text-neutral-0 text-[13px]">Progress</h4>
+            <p className="text-[#7C7C7C] text-[12px]">(375.17%)</p>
+          </span>
+
+          {/* Progressbar */}
+          <div className="mt-[20px] mb-[10px]">
+            <ProgressBar />
+          </div>
+
+          {/* Progress Details */}
+          <span className="flex justify-between">
+            <p className="text-[#7C7C7C] text-[12px]">3,750FTM</p>
+            <p className="text-[#7C7C7C] text-[12px]">1,000FTM</p>
+          </span>
+        </div>
       </div>
     </li>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Progress = () => {
-  return <div>Progress Bar</div>;
+const ProgressBar = () => {
+  return <div className="bg-blue-700 h-[30px] w-full">Progress Bar</div>;
 };
 
-export default Progress;
+export default ProgressBar;
