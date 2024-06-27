@@ -18,8 +18,7 @@ const TokenDetails = () => {
           className="w-[1000px] h-[1000px] object-cover"
         />
       </div>
-      {/* Top Bar */}
-      <TopBar />
+
       {/* Large Screen */}
       <Desktop />
       {/* Mobile Screen */}

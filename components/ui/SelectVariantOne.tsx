@@ -8,13 +8,15 @@ import {
 } from "@/components/ui/select";
 
 type SelectVariantOneT = {
-  label: string;
+  label?: string;
   options?: string[];
+  className?: string;
 };
-const SelectVariantOne = ({ label }: SelectVariantOneT) => {
+const SelectVariantOne = ({ label, className }: SelectVariantOneT) => {
   return (
-    <div className="flex items-center gap-[10px]">
-      <label className="">{label}</label>
+    <div className={`flex items-center gap-[10px] ${className}`}>
+      {label && <label className="">{label}</label>}
+
       <div className="w-full">
         <Select>
           <SelectTrigger className="max-w-[700px] text-[#828282] bg-[#191E23] border-none outline-none focus:border-none ">
