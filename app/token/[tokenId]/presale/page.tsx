@@ -1,5 +1,5 @@
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
-import PresaleCard from "@/containers/presale/PresaleCard";
+import PresaleCard from "@/containers/presale/PresaleCard/PresaleCard";
 import PresaleFilterTopBar from "@/containers/presale/PresaleFilterTopBar";
 import React from "react";
 
