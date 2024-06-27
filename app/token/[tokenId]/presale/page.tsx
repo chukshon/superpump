@@ -8,12 +8,61 @@ const Presale = () => {
       id: "1",
       name: "Pope Pepe",
       status: "Live Sale",
-      image: "",
+      image: "/images/tokens/beach-token.svg",
       type: "Presale",
       softCap: 1000,
       liquidity: 90,
       lockupTime: "180 days",
       salesEnd: "01:17:33:01",
+      twitterLink: "",
+      telegramLink: "",
+      total: 3750,
+      available: 1000,
+    },
+    {
+      id: "2",
+      name: "Pope Pepe",
+      status: "Upcoming",
+      image: "/images/tokens/beach-token.svg",
+      type: "Fair Launch - Max buy 150 FTM",
+      softCap: 1000,
+      liquidity: 90,
+      lockupTime: "180 days",
+      salesEnd: "01:17:33:01",
+      twitterLink: "",
+      telegramLink: "",
+      total: 3750,
+      available: 1000,
+    },
+    {
+      id: "3",
+      name: "Pope Pepe",
+      status: "Live Sale",
+      image: "/images/tokens/beach-token.svg",
+      type: "Fair Launch - Max buy 150 FTM",
+      softCap: 1000,
+      liquidity: 90,
+      lockupTime: "180 days",
+      salesEnd: "01:17:33:01",
+      twitterLink: "",
+      telegramLink: "",
+      total: 3750,
+      available: 1000,
+    },
+    {
+      id: "4",
+      name: "Pope Pepe",
+      status: "Live Sale",
+      image: "/images/tokens/beach-token.svg",
+      type: "Fair Launch - Max buy 150 FTM",
+      softCap: 1000,
+      liquidity: 90,
+      lockupTime: "180 days",
+      salesEnd: "01:17:33:01",
+      twitterLink: "",
+      telegramLink: "",
+      total: 3750,
+      available: 1000,
     },
   ];
   return (
@@ -23,6 +72,11 @@ const Presale = () => {
         <PresaleFilterTopBar />
 
         {/* Presale List */}
+        <ul>
+          {PRESALE_LIST_DATA.map((presaleItem) => {
+            return <li>Presale Item</li>;
+          })}
+        </ul>
       </div>
     </main>
   );
