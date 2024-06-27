@@ -66,6 +66,7 @@ const Presale = () => {
       available: 1000,
     },
   ];
+
   return (
     <main className="lg:border-[1px] border-b-[0px] mx-[20px] my-[10px] border-neutral-0 h-[100vh]">
       <div className="lg:py-[50px] lg:px-[50px] py-[10px]">
@@ -75,7 +76,7 @@ const Presale = () => {
         {/* Presale List */}
         <ul className="mt-[20px] gap-x-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 place-items-center">
           {PRESALE_LIST_DATA.map((presaleItem) => {
-            return <PresaleCard key={presaleItem.id} />;
+            return <PresaleCard {...presaleItem} key={presaleItem.id} />;
           })}
         </ul>
       </div>
