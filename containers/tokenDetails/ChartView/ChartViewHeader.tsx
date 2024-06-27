@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { IoStarSharp } from "react-icons/io5";
 import { AiFillCopy } from "react-icons/ai";
-import { PiTelegramLogoLight } from "react-icons/pi";
-import { RiTwitterXLine } from "react-icons/ri";
+import TwitterIcon from "@/components/Icons/TwitterIcon";
+import TelegramIcon from "@/components/Icons/TelegramIcon";
 
 const ChartViewHeader = () => {
   return (
@@ -60,8 +60,8 @@ const ChartViewHeader = () => {
 
           {/* Socials */}
           <span className="flex items-center gap-[10px] z-30">
-            <PiTelegramLogoLight className="text-[#47A7FF]" size={23} />
-            <RiTwitterXLine className="text-[#47A7FF]" size={20} />
+            <TelegramIcon />
+            <TwitterIcon />
           </span>
         </div>
       </div>
