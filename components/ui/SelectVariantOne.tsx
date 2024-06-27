@@ -19,7 +19,7 @@ const SelectVariantOne = ({ label, className }: SelectVariantOneT) => {
 
       <div className="w-full">
         <Select>
-          <SelectTrigger className="max-w-[700px] text-[#828282] bg-[#191E23] border-none outline-none focus:border-none ">
+          <SelectTrigger className="text-[#828282] bg-[#191E23] border-none outline-none focus:border-none ">
             <SelectValue
               placeholder="Created(Ascending)"
               className="text-neutral-0"
