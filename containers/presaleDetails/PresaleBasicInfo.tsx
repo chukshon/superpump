@@ -22,7 +22,7 @@ const PresaleBasicInfo = () => {
         </div>
 
         <div className="flex flex-col xl:flex-row items-center lg:justify-between">
-          <div className="mt-[-70px] xl:mt-[-70px] lg:ml-[30px] bg-[#0ECB81] w-[100px] h-[100px] rounded-full grid place-items-center">
+          <div className="mt-[-70px] xl:mt-[-70px] lg:ml-[40px] bg-[#0ECB81] w-[100px] h-[100px] rounded-full grid place-items-center">
             <Image
               src={"/icons/pepe-presale-icon.svg"}
               width={100}
