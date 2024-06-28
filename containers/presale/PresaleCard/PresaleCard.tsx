@@ -24,7 +24,7 @@ type PresaleCardProps = {
 };
 const PresaleCard = (props: PresaleCardProps) => {
   return (
-    <li className="w-full lg:w-[330px] border-[1px] border-neutral-0 rounded-[8px] p-[10px]">
+    <li className="border-one w-full lg:w-[330px] rounded-[8px] p-[10px]">
       <div className="bg-[#222222] rounded-[8px] h-full border-[1px] border-neutral-150 py-[15px] px-[10px]">
         <div className="flex justify-between items-start">
           <div className="bg-[#0ECB81] w-[70px] h-[70px] rounded-full grid place-items-center">
