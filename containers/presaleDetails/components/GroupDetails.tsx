@@ -14,12 +14,12 @@ const GroupDetails = ({
     <div
       className={`flex ${
         responsive
-          ? "flex-col lg:flex-row lg: justify-between lg:items-center"
+          ? "flex-col md:flex-row md:justify-between md:items-center"
           : "flex-row justify-between items-center"
       }`}
     >
       <h3 className="text-[#47A7FF] font-[600]">{label}</h3>
-      <p className="text-neutral-0 text-wrap">{value}</p>
+      <p className="text-neutral-0 text-wrap break-words">{value}</p>
     </div>
   );
 };

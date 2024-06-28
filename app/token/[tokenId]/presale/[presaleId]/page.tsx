@@ -1,3 +1,4 @@
+import Divider from "@/components/ui/Divider";
 import PresaleBasicInfo from "@/containers/presaleDetails/PresaleBasicInfo";
 import React from "react";
 
@@ -12,11 +13,17 @@ const PresaleDetails = () => {
       {/* Grid */}
       <div className="flex gap-[20px] flex-col xl:flex-row my-[20px] mx-[20px] xl:mx-[40px] lg:mx-auto max-w-[1360px]">
         {/* Left Col */}
-        <div className="xl:w-[60%] h-[100vh] lg:border-one rounded-[8px] md:px-[20px] md:py-[10px]">
+        <div className="xl:w-[60%] lg:border-one rounded-[8px] md:px-[20px] md:py-[10px]">
           <PresaleBasicInfo />
+          <div>
+            <Divider
+              className="bg-[#47A7FF]
+"
+            />
+          </div>
         </div>
         {/* Right Col */}
-        <div className="xl:w-[40%] h-[100vh] lg:border-one rounded-[8px]"></div>
+        <div className="xl:w-[40%] lg:border-one rounded-[8px]"></div>
       </div>
     </div>
   );
