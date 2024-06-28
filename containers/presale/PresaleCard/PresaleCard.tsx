@@ -1,11 +1,11 @@
 "use client";
-
 import Image from "next/image";
 import React from "react";
 import PresaleStatus from "./PresaleStatus";
 import TwitterIcon from "@/components/Icons/TwitterIcon";
 import TelegramIcon from "@/components/Icons/TelegramIcon";
 import ProgressBar from "@/components/ui/ProgressBar";
+import { useRouter } from "next/navigation";
 
 type PresaleCardProps = {
   id: string;
@@ -23,6 +23,10 @@ type PresaleCardProps = {
   available: number;
 };
 const PresaleCard = (props: PresaleCardProps) => {
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("presale/2");
+  };
   return (
     <li className="border-one w-full lg:w-[330px] rounded-[8px] p-[10px]">
       <div className="bg-[#222222] rounded-[8px] h-full border-[1px] border-neutral-150 py-[15px] px-[10px]">
@@ -97,9 +101,7 @@ const PresaleCard = (props: PresaleCardProps) => {
             </span>
             <button
               type="button"
-              onClick={() => {
-                alert("hello world");
-              }}
+              onClick={handleClick}
               className="z-40 bg-custom-radial text-neutral-0 py-[10px] px-[25px] rounded-[8px] text-[13px]"
             >
               View Full Info
