@@ -145,6 +145,10 @@
     background-clip: content-box, border-box;
   }
 
+  .border-one {
+    @apply border-[1px] border-[#283356]
+  }
+
   .custom-blur {
     backdrop-filter: blur(4px);
     /* Adjust the blur value as needed */

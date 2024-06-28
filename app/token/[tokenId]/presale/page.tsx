@@ -98,7 +98,7 @@ const Presale = () => {
   ];
 
   return (
-    <main className="relative lg:border-[1px] lg:border-b-[0px] rounded-tr-[8px] rounded-tl-[8px] mx-[20px] my-[10px] border-neutral-0">
+    <main className="relative lg:border-one rounded-tr-[8px] rounded-tl-[8px] mx-[20px] my-[10px] border-neutral-0">
       <Image
         src={"/images/presale-page-ecllipse.png"}
         alt="superpumpfun presale eclipse background "
