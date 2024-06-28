@@ -60,14 +60,14 @@ const PresaleCard = (props: PresaleCardProps) => {
         </div>
 
         {/* Progress */}
-        <div>
+        <div className="mt-[30px]">
           <span className="flex items-center gap-[10px]">
             <h4 className="text-neutral-0 text-[13px]">Progress</h4>
             <p className="text-[#7C7C7C] text-[12px]">(375.17%)</p>
           </span>
 
           {/* Progressbar */}
-          <div className="mt-[20px] mb-[10px]">
+          <div className="mt-[10px] mb-[10px]">
             <ProgressBar />
           </div>
 
