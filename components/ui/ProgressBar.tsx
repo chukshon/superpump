@@ -1,7 +1,8 @@
 import React from "react";
+import { Progress } from "@/components/ui/progress";
 
 const ProgressBar = () => {
-  return <div className="bg-blue-700 h-[30px] w-full">Progress Bar</div>;
+  return <Progress value={33} />;
 };
 
 export default ProgressBar;

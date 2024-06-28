@@ -22,7 +22,7 @@ type PresaleCardProps = {
 };
 const PresaleCard = (props: PresaleCardProps) => {
   return (
-    <li className="w-full lg:w-[330px] h-[600px] border-[1px] border-neutral-0 rounded-[8px] p-[10px]">
+    <li className="w-full lg:w-[330px] border-[1px] border-neutral-0 rounded-[8px] p-[10px]">
       <div className="bg-[#222222] rounded-[8px] h-full border-[1px] border-neutral-150 py-[15px] px-[10px]">
         <div className="flex justify-between items-start">
           <div className="bg-[#0ECB81] w-[70px] h-[70px] rounded-full grid place-items-center">
@@ -76,6 +76,30 @@ const PresaleCard = (props: PresaleCardProps) => {
             <p className="text-[#7C7C7C] text-[12px]">3,750FTM</p>
             <p className="text-[#7C7C7C] text-[12px]">1,000FTM</p>
           </span>
+
+          <div className="my-[40px]">
+            <span className="flex justify-between">
+              <p className="text-neutral-0 text-[14px]">Liquidity</p>
+              <p className="text-neutral-0 text-[14px]">90%</p>
+            </span>
+            <span className="flex justify-between">
+              <p className="text-neutral-0 text-[14px]">Lockup Time</p>
+              <p className="text-neutral-0 text-[14px]">180 days</p>
+            </span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <span className="text-neutral-0 ">
+              <p className="text-[13px]">Sales end in:</p>
+              <p className="font-[600] text-[14px]">01:17:33:01</p>
+            </span>
+            <button
+              type="button"
+              className="bg-custom-radial text-neutral-0 py-[10px] px-[25px] rounded-[8px] text-[13px]"
+            >
+              View Full Info
+            </button>
+          </div>
         </div>
       </div>
     </li>
