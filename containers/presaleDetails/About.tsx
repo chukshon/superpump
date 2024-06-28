@@ -1,3 +1,4 @@
+import Divider from "@/components/ui/Divider";
 import React from "react";
 
 const About = () => {
@@ -14,6 +15,7 @@ const About = () => {
         Solana Trending Bots ⚡️ Fast-Track CMC & CG 📢 Ads on all Major Crypto
         Websites
       </p>
+      <Divider className="bg-[#47A7FF] my-[20px]" />
     </div>
   );
 };

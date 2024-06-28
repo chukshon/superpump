@@ -4,6 +4,7 @@ import PresaleStatus from "../presale/PresaleCard/PresaleStatus";
 import TelegramIcon from "@/components/Icons/TelegramIcon";
 import TwitterIcon from "@/components/Icons/TwitterIcon";
 import GroupDetails from "./components/GroupDetails";
+import Divider from "@/components/ui/Divider";
 
 const PresaleBasicInfo = () => {
   return (
@@ -60,6 +61,7 @@ const PresaleBasicInfo = () => {
           responsive
         />
       </div>
+      <Divider className="bg-[#47A7FF] my-[20px]" />
     </div>
   );
 };

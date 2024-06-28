@@ -20,9 +20,7 @@ const PresaleDetails = () => {
         {/* Left Col */}
         <div className="xl:w-[60%] lg:border-one rounded-[8px] md:px-[20px] md:py-[10px]">
           <PresaleBasicInfo />
-          <Divider className="bg-[#47A7FF] my-[20px]" />
           <About />
-          <Divider className="bg-[#47A7FF] my-[20px]" />
           <PoolInfo />
         </div>
         {/* Right Col */}
