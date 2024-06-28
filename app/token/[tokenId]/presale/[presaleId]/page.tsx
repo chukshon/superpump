@@ -1,4 +1,3 @@
-import Divider from "@/components/ui/Divider";
 import About from "@/containers/presaleDetails/About";
 import ContributorsInfo from "@/containers/presaleDetails/ContributorsInfo";
 import PoolInfo from "@/containers/presaleDetails/PoolInfo";
