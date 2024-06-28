@@ -19,8 +19,8 @@ const MobileNav = () => {
           <GiHamburgerMenu size={30} className="text-neutral-0" />
         </SheetTrigger>
         <SheetContent
-          style={{ width: "calc(100% - 10%)" }}
-          className="w-full max-h-[600px]  h-full nav-bg-gradient lg:hidden"
+          style={{ width: "calc(100% - 10%)", height: "calc(100% - 10%)" }}
+          className="w-full  h-full nav-bg-gradient lg:hidden"
         ></SheetContent>
       </Sheet>
     </div>
