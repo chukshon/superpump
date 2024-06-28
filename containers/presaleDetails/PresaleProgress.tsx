@@ -2,6 +2,7 @@ import React from "react";
 import CountDownItem from "./components/CountDownItem";
 import ProgressBar from "@/components/ui/ProgressBar";
 import GroupDetails from "./components/GroupDetails";
+import Divider from "@/components/ui/Divider";
 
 const PresaleProgress = () => {
   const COUNTDOWN = ["01", "01", "01", "01"];
@@ -22,7 +23,7 @@ const PresaleProgress = () => {
       {/* Progress */}
       <div className="my-[30px]">
         <span className="flex items-center gap-[10px]">
-          <h4 className="text-neutral-0 text-[15px]">Progress</h4>
+          <h4 className="text-neutral-0 text-[20px]">Progress</h4>
           <p className="text-neutral-0 text-[15px]">(375.17%)</p>
         </span>
 
@@ -62,6 +63,7 @@ const PresaleProgress = () => {
         <GroupDetails label={"Current Rate"} value={"1 FTM = 1,000 POPEPEPE"} />
         <GroupDetails label={"Current Raised"} value={"3,750 FTM (375.33%)"} />
       </div>
+      <Divider className="bg-[#47A7FF] my-[20px]" />
     </div>
   );
 };

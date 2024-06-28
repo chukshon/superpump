@@ -28,7 +28,6 @@ const PresaleDetails = () => {
         {/* Right Col */}
         <div className="xl:w-[40%] lg:border-one rounded-[8px] py-[20px] md:px-[20px]">
           <PresaleProgress />
-          <Divider className="bg-[#47A7FF] my-[20px]" />
           <ContributorsInfo />
         </div>
       </div>
