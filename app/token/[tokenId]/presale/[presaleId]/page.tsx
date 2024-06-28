@@ -1,5 +1,8 @@
 import Divider from "@/components/ui/Divider";
+import About from "@/containers/presaleDetails/About";
+import PoolInfo from "@/containers/presaleDetails/PoolInfo";
 import PresaleBasicInfo from "@/containers/presaleDetails/PresaleBasicInfo";
+
 import React from "react";
 
 const PresaleDetails = () => {
@@ -15,12 +18,10 @@ const PresaleDetails = () => {
         {/* Left Col */}
         <div className="xl:w-[60%] lg:border-one rounded-[8px] md:px-[20px] md:py-[10px]">
           <PresaleBasicInfo />
-          <div>
-            <Divider
-              className="bg-[#47A7FF]
-"
-            />
-          </div>
+          <Divider className="bg-[#47A7FF] my-[20px]" />
+          <About />
+          <Divider className="bg-[#47A7FF] my-[20px]" />
+          <PoolInfo />
         </div>
         {/* Right Col */}
         <div className="xl:w-[40%] lg:border-one rounded-[8px]"></div>
