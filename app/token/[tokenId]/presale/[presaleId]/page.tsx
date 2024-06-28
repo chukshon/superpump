@@ -1,5 +1,6 @@
 import Divider from "@/components/ui/Divider";
 import About from "@/containers/presaleDetails/About";
+import ContributorsInfo from "@/containers/presaleDetails/ContributorsInfo";
 import PoolInfo from "@/containers/presaleDetails/PoolInfo";
 import PresaleBasicInfo from "@/containers/presaleDetails/PresaleBasicInfo";
 import PresaleProgress from "@/containers/presaleDetails/PresaleProgress";
@@ -25,8 +26,10 @@ const PresaleDetails = () => {
           <PoolInfo />
         </div>
         {/* Right Col */}
-        <div className="xl:w-[40%] lg:border-one rounded-[8px] py-[20px]">
+        <div className="xl:w-[40%] lg:border-one rounded-[8px] py-[20px] md:px-[20px]">
           <PresaleProgress />
+          <Divider className="bg-[#47A7FF] my-[20px]" />
+          <ContributorsInfo />
         </div>
       </div>
     </div>
