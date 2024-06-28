@@ -2,6 +2,7 @@ import Divider from "@/components/ui/Divider";
 import About from "@/containers/presaleDetails/About";
 import PoolInfo from "@/containers/presaleDetails/PoolInfo";
 import PresaleBasicInfo from "@/containers/presaleDetails/PresaleBasicInfo";
+import PresaleProgress from "@/containers/presaleDetails/PresaleProgress";
 
 import React from "react";
 
@@ -24,7 +25,9 @@ const PresaleDetails = () => {
           <PoolInfo />
         </div>
         {/* Right Col */}
-        <div className="xl:w-[40%] lg:border-one rounded-[8px]"></div>
+        <div className="xl:w-[40%] lg:border-one rounded-[8px] py-[20px]">
+          <PresaleProgress />
+        </div>
       </div>
     </div>
   );
