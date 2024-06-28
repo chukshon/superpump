@@ -26,7 +26,7 @@ const ContributorsInfo = () => {
           View Details
         </button>
       </div>
-      <Divider className="bg-[#47A7FF] my-[20px]" />
+      <Divider className="bg-[#47A7FF] my-[40px]" />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import ContributorsInfo from "@/containers/presaleDetails/ContributorsInfo";
 import PoolInfo from "@/containers/presaleDetails/PoolInfo";
 import PresaleBasicInfo from "@/containers/presaleDetails/PresaleBasicInfo";
 import PresaleProgress from "@/containers/presaleDetails/PresaleProgress";
+import Tokenomics from "@/containers/presaleDetails/Tokenomics";
 
 import React from "react";
 
@@ -26,6 +27,7 @@ const PresaleDetails = () => {
         <div className="xl:w-[40%] lg:border-one rounded-[8px] py-[20px] md:px-[20px]">
           <PresaleProgress />
           <ContributorsInfo />
+          <Tokenomics />
         </div>
       </div>
     </div>
