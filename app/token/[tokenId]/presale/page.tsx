@@ -101,8 +101,8 @@ const Presale = () => {
     <main className="relative lg:border-[1px] lg:border-b-[0px] rounded-tr-[8px] rounded-tl-[8px] mx-[20px] my-[10px] border-neutral-0">
       <Image
         src={"/images/presale-page-ecllipse.png"}
-        alt="superpumpfun presale eclipse background"
-        className="absolute h-full w-full z-0"
+        alt="superpumpfun presale eclipse background "
+        className="absolute h-[900px] w-[861px] z-0 hidden lg:block"
         width={30}
         height={30}
       />
@@ -111,7 +111,7 @@ const Presale = () => {
         <PresaleFilterTopBar />
 
         {/* Presale List */}
-        <ul className="mt-[20px] gap-x-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 place-items-center">
+        <ul className="z-50 mt-[20px] gap-x-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-5 place-items-center">
           {PRESALE_LIST_DATA.map((presaleItem) => {
             return <PresaleCard {...presaleItem} key={presaleItem.id} />;
           })}

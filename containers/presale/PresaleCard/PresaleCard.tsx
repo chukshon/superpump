@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import PresaleStatus from "./PresaleStatus";
@@ -39,7 +41,7 @@ const PresaleCard = (props: PresaleCardProps) => {
         </div>
 
         {/* Title and socials */}
-        <span className="flex justify-between items-center mt-[10px]">
+        <span className="z-30 flex justify-between items-center mt-[10px]">
           <h1 className="text-neutral-0 text-[24px]">{props.name}</h1>
           <div className="flex items-center gap-[10px]">
             <TwitterIcon />
@@ -47,7 +49,7 @@ const PresaleCard = (props: PresaleCardProps) => {
           </div>
         </span>
         {/* Type of presale */}
-        <p className="text-[#7C7C7C] text-[12px]">
+        <p className="z-30  text-[#7C7C7C] text-[12px]">
           Fair Launch - Max buy 150 FTM
         </p>
         {/* Divider */}
@@ -95,7 +97,10 @@ const PresaleCard = (props: PresaleCardProps) => {
             </span>
             <button
               type="button"
-              className="bg-custom-radial text-neutral-0 py-[10px] px-[25px] rounded-[8px] text-[13px]"
+              onClick={() => {
+                alert("hello world");
+              }}
+              className="z-40 bg-custom-radial text-neutral-0 py-[10px] px-[25px] rounded-[8px] text-[13px]"
             >
               View Full Info
             </button>
