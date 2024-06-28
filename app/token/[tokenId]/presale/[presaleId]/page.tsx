@@ -14,7 +14,7 @@ const PresaleDetails = () => {
       </div>
 
       {/* Grid */}
-      <div className="flex gap-[20px] flex-col xl:flex-row my-[20px] mx-[20px] xl:mx-[40px] lg:mx-auto max-w-[1360px]">
+      <div className="flex gap-[20px] flex-col xl:flex-row my-[20px] mx-[20px] lg:mx-[40px] xl:mx-auto max-w-[1500px]">
         {/* Left Col */}
         <div className="xl:w-[60%] lg:border-one rounded-[8px] md:px-[20px] md:py-[10px]">
           <PresaleBasicInfo />

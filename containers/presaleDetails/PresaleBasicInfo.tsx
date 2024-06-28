@@ -43,7 +43,7 @@ const PresaleBasicInfo = () => {
         </div>
       </div>
       {/* Basic Info */}
-      <div className="mt-[30px] flex flex-col gap-[20px]">
+      <div className="mt-[30px] flex flex-col gap-[10px] md:gap-[20px]">
         <GroupDetails
           label={"Address"}
           value={"aBcDeRhXDd6dvUyfQqMGq19EbrNzZHPRJk2kQqskcX78"}
