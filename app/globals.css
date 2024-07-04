@@ -146,6 +146,9 @@
   }
 
   .border-one {
+    box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
+    -webkit-box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
+    -moz-box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
     @apply border-[1px] border-[#283356]
   }
 
@@ -156,5 +159,20 @@
 
   .nav-bg-gradient {
     @apply bg-gradient-to-b from-[#1B488B] to-[#111111];
+  }
+
+  .bg-linear-gradient {
+    background: rgb(19, 21, 23);
+    background: linear-gradient(180deg, rgba(19, 21, 23, 1) 0%, rgba(19, 21, 23, 1) 12%, rgba(21, 43, 78, 1) 60%);
+  }
+
+  .bg-linear-gradient-inactive {
+    background: rgb(18, 23, 29);
+    background: linear-gradient(180deg, rgba(18, 23, 29, 1) 26%, rgba(18, 27, 40, 1) 57%);
+  }
+
+  .bg-green-radial-gradient {
+    background: rgb(15, 168, 109);
+    background: linear-gradient(106deg, rgba(15, 168, 109, 1) 4%, rgba(11, 79, 53, 1) 85%);
   }
 }

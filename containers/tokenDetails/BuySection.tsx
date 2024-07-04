@@ -12,7 +12,7 @@ const BuySection = () => {
 
       {/* Price Input */}
       <div className="mt-[10px]">
-        <div className="border-[1px] border-neutral-150 flex gap-[4px] items-center pl-[10px] py-[10px] rounded-[10px]">
+        <div className="border-[1.5px] border-[#172532] flex gap-[4px] items-center pl-[10px] py-[10px] rounded-[10px]">
           <Image
             src="/icons/ftm-logo-priceitem.svg"
             width={20}
@@ -38,7 +38,7 @@ const BuySection = () => {
       {/* Quick Buy/Sell */}
       <button
         type="button"
-        className="bg-green-600 w-full text-center py-[10px]"
+        className="text-neutral-0 rounded-[4px] font-[600] text-[16px] bg-green-radial-gradient w-full text-center py-[10px]"
       >
         Quick Buy
       </button>
