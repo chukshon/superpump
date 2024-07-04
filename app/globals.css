@@ -146,9 +146,9 @@
   }
 
   .border-one {
-    box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
-    -webkit-box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
-    -moz-box-shadow: 3px -11px 195px 0px rgba(17, 30, 49, 0.97) inset;
+    box-shadow: 3px -11px 42px 0px rgba(17, 30, 49, 0.97) inset;
+    -webkit-box-shadow: 3px -11px 42px 0px rgba(17, 30, 49, 0.97) inset;
+    -moz-box-shadow: 3px -11px 42px 0px rgba(17, 30, 49, 0.97) inset;
     @apply border-[1px] border-[#283356]
   }
 
