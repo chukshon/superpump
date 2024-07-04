@@ -5,7 +5,7 @@ const PriceItem = () => {
   return (
     <button
       type="button"
-      className="flex rounded-[10px] text-neutral-0 items-center gap-[5px] border-[1px] border-neutral-0 py-[3px] pl-[10px] w-[80px]"
+      className="flex rounded-[10px] text-neutral-0 items-center gap-[5px] border-[1.5px] border-[#172532] py-[3px] pl-[10px] w-[80px]"
     >
       <Image
         src="/icons/ftm-logo-priceitem.svg"

@@ -10,12 +10,12 @@ const Desktop = () => {
     <div className="hidden lg:block">
       <div className=" flex items-start mt-[30px] gap-[20px] container">
         {/* Chart Left Column */}
-        <div className=" w-[70%] border-[1px] border-b-[0px] border-neutral-0 pt-[15px] pb-[60px]">
+        <div className=" w-[70%] border-[1px] border-b-[0px] border-one pt-[15px] pb-[60px] rounded-[8px]">
           <ChartView />
         </div>
 
         {/* Token Actions Right Column */}
-        <div className="w-[30%]  border-[1px] border-neutral-0 px-[10px] py-[10px] rounded-[8px]">
+        <div className="w-[30%]  border-[1px] border-one px-[10px] py-[10px] rounded-[8px]">
           {/* Trade details */}
           <div className="mt-[10px]">
             <TradeDetailsBox />

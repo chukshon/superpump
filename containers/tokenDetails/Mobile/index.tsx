@@ -34,13 +34,13 @@ const Mobile = () => {
       <div className="fixed bottom-[0px] z-40 w-full">
         {/* Buy and sell Section */}
         {showFloatingBar && (
-          <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-red-500 px-[30px] bg-neutral-900 py-[30px]">
+          <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-one px-[30px] bg-neutral-900 py-[30px]">
             <TradeItem />
           </div>
         )}
 
         {/* Footer */}
-        <div className="border-t-[2px] border-red-500 bg-neutral-900 flex justify-between">
+        <div className="border-t-[2px] border-one bg-neutral-900 flex justify-between">
           <FooterTab
             title="Buy"
             handleClick={() => {
