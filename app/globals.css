@@ -180,4 +180,9 @@
     background: rgb(23, 25, 30);
     background: linear-gradient(180deg, rgba(23, 25, 30, 1) 4%, rgba(20, 52, 86, 1) 85%);
   }
+
+  .btn-bg-red-linear-gradient {
+    background: rgb(226, 63, 86);
+    background: linear-gradient(63deg, rgba(226, 63, 86, 1) 4%, rgba(107, 31, 41, 1) 85%);
+  }
 }
