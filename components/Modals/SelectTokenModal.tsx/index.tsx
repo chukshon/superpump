@@ -5,6 +5,9 @@ import Divider from "@/components/ui/Divider";
 import TokenListItem from "./TokenListItem";
 
 const SelectTokenModal = () => {
+  const handleSelectedToken = () => {
+    console.log("hey");
+  };
   return (
     <Modal modalHeaderTitle={`Select a token`} width={400}>
       <div className="px-[20px] mt-[10px]">
@@ -25,8 +28,20 @@ const SelectTokenModal = () => {
 
       {/* Token List */}
       <ul className="flex flex-col gap-[10px]">
-        <TokenListItem isActive={true} />
-        <TokenListItem isActive={false} />
+        <TokenListItem
+          onSelectToken={handleSelectedToken}
+          isSelected={true}
+          tokenName="Ethereum"
+          tokenTicker="ETH"
+          tokenAmount={3.2}
+        />
+        <TokenListItem
+          onSelectToken={handleSelectedToken}
+          isSelected={true}
+          tokenName="Ethereum"
+          tokenTicker="ETH"
+          tokenAmount={3.2}
+        />
       </ul>
     </Modal>
   );
