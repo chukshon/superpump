@@ -2,8 +2,12 @@ import React from "react";
 import PriceItem from "./PriceItem";
 import Image from "next/image";
 import { RiArrowDownSLine } from "react-icons/ri";
+import { useModalContext } from "@/context/ModalContext";
+import SelectTokenModal from "@/components/Modals/SelectTokenModal.tsx";
+import { Select } from "@radix-ui/react-select";
 
 const BuySection = () => {
+  const { showModal } = useModalContext();
   return (
     <div>
       {/* Fixed Price List */}
@@ -28,10 +32,16 @@ const BuySection = () => {
         </div>
       </div>
       {/* Token Selector */}
-      <div className="mt-[10px] cursor-pointer flex items-center gap-[10px] pl-[20px] py-[10px] border-[1.5px] border-[#172532] rounded-[10px]">
+      <button
+        type="button"
+        onClick={() => {
+          showModal(<SelectTokenModal />);
+        }}
+        className="w-full mt-[10px] cursor-pointer flex items-center gap-[10px] pl-[20px] py-[10px] border-[1.5px] border-[#172532] rounded-[10px]"
+      >
         <RiArrowDownSLine className="text-neutral-0" />
         <p className="text-[#4A4A4A]">or select a token</p>
-      </div>
+      </button>
 
       {/* Advanced Settings */}
       <button
