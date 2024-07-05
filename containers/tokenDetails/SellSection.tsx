@@ -54,9 +54,13 @@ const SellSection = () => {
 };
 
 const SelectDropdown = () => {
+  const [selectedValue, setSelectedValue] = React.useState("");
+  const handleSelect = (value: string) => {
+    console.log(value);
+  };
   return (
     <div>
-      <Select>
+      <Select onValueChange={handleSelect}>
         <SelectTrigger className="rounded-tl-[8px] rounded-bl-[8px] h-[48px] text-[#828282] bg-transparent  border-[1.5px] border-[#172532] border-r-[0px] outline-none focus:border-[#172532] focus:outline-none">
           <span>
             <SelectValue />
