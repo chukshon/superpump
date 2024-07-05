@@ -1,10 +1,13 @@
 import React from "react";
 import PriceItem from "./PriceItem";
-import Image from "next/image";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { RiArrowDownSLine } from "react-icons/ri";
-import { useModalContext } from "@/context/ModalContext";
-import SelectTokenModal from "@/components/Modals/SelectTokenModal.tsx";
-import { Select } from "@radix-ui/react-select";
 
 const SellSection = () => {
   return (
@@ -16,10 +19,11 @@ const SellSection = () => {
 
       {/* Price Input */}
       <div className="mt-[10px]">
-        <div className="border-[1.5px] border-[#172532] flex gap-[4px] items-center pl-[10px] py-[10px] rounded-[10px]">
+        <div className="flex gap-[0px] items-center w-full">
+          <SelectDropdown />
           <input
             placeholder="Enter amount in FTM"
-            className="w-[70%] outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4A] text-neutral-50 "
+            className="rounded-tr-[8px] rounded-br-[8px] pl-[10px] py-[10px] border-[1.5px] border-[#172532] w-full outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4A] text-neutral-50 "
           />
         </div>
       </div>
@@ -32,7 +36,7 @@ const SellSection = () => {
         <p className="text-right">Advanced Settings</p>
       </button>
 
-      {/* Quick Buy/Sell */}
+      {/* Quick Sell */}
       <button
         type="button"
         className="text-neutral-0 rounded-[4px] font-[600] text-[16px] btn-bg-red-linear-gradient w-full text-center py-[10px]"
@@ -45,6 +49,24 @@ const SellSection = () => {
         enabled for Raydium AMM. Once you click on Quick Sell, your transaction
         is sent immediately.
       </p>
+    </div>
+  );
+};
+
+const SelectDropdown = () => {
+  return (
+    <div>
+      <Select>
+        <SelectTrigger className="rounded-tl-[8px] rounded-bl-[8px] h-[48px] text-[#828282] bg-transparent  border-[1.5px] border-[#172532] border-r-[0px] outline-none focus:border-[#172532] focus:outline-none">
+          <span>
+            <SelectValue />
+          </span>
+        </SelectTrigger>
+        <SelectContent className="bg-[#171717] border-[1.5px] border-[#172532] text-neutral-0">
+          <SelectItem value="%">%</SelectItem>
+          <SelectItem value="FTM">FTM</SelectItem>
+        </SelectContent>
+      </Select>
     </div>
   );
 };
