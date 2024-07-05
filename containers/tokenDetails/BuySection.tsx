@@ -1,6 +1,7 @@
 import React from "react";
 import PriceItem from "./PriceItem";
 import Image from "next/image";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 const BuySection = () => {
   return (
@@ -22,9 +23,14 @@ const BuySection = () => {
           />
           <input
             placeholder="Enter amount in FTM"
-            className="w-[70%] outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4ACC] text-neutral-50 "
+            className="w-[70%] outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4A] text-neutral-50 "
           />
         </div>
+      </div>
+      {/* Token Selector */}
+      <div className="mt-[10px] cursor-pointer flex items-center gap-[10px] pl-[20px] py-[10px] border-[1.5px] border-[#172532] rounded-[10px]">
+        <RiArrowDownSLine className="text-neutral-0" />
+        <p className="text-[#4A4A4A]">or select a token</p>
       </div>
 
       {/* Advanced Settings */}
