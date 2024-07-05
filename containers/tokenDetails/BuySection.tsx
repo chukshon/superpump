@@ -11,9 +11,29 @@ const BuySection = () => {
   return (
     <div>
       {/* Fixed Price List */}
-      <ul>
+      <ul className="flex flex-wrap gap-[10px]">
         <PriceItem
-          amount={5}
+          amount={"5"}
+          hasIcon={true}
+          icon="/icons/ftm-logo-priceitem.svg"
+        />
+        <PriceItem
+          amount={"10"}
+          hasIcon={true}
+          icon="/icons/ftm-logo-priceitem.svg"
+        />
+        <PriceItem
+          amount={"15"}
+          hasIcon={true}
+          icon="/icons/ftm-logo-priceitem.svg"
+        />
+        <PriceItem
+          amount={"20"}
+          hasIcon={true}
+          icon="/icons/ftm-logo-priceitem.svg"
+        />
+        <PriceItem
+          amount={"25"}
           hasIcon={true}
           icon="/icons/ftm-logo-priceitem.svg"
         />

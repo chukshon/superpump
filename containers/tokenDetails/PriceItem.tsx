@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 type PriceItemProps = {
-  amount: number;
+  amount: number | string;
   hasIcon: boolean;
   icon?: string;
 };
@@ -22,7 +22,7 @@ const PriceItem = ({ amount, hasIcon, icon }: PriceItemProps) => {
         />
       )}
 
-      <p className="font-[700]">{amount}%</p>
+      <p className="font-[700]">{amount}</p>
     </button>
   );
 };

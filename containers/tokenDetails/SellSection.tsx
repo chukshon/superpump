@@ -13,8 +13,11 @@ const SellSection = () => {
   return (
     <div>
       {/* Fixed Price List */}
-      <ul>
-        <PriceItem amount={5} hasIcon={false} />
+      <ul className="flex flex-wrap gap-[10px]">
+        <PriceItem amount={"20%"} hasIcon={false} />
+        <PriceItem amount={"25%"} hasIcon={false} />
+        <PriceItem amount={"30%"} hasIcon={false} />
+        <PriceItem amount={"40%"} hasIcon={false} />
       </ul>
 
       {/* Price Input */}
@@ -67,8 +70,12 @@ const SelectDropdown = () => {
           </span>
         </SelectTrigger>
         <SelectContent className="bg-[#171717] border-[1.5px] border-[#172532] text-neutral-0">
-          <SelectItem value="%">%</SelectItem>
-          <SelectItem value="FTM">FTM</SelectItem>
+          <SelectItem className="cursor-pointer" value="%">
+            %
+          </SelectItem>
+          <SelectItem className="cursor-pointer" value="FTM">
+            FTM
+          </SelectItem>
         </SelectContent>
       </Select>
     </div>
