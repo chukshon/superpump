@@ -12,7 +12,11 @@ const BuySection = () => {
     <div>
       {/* Fixed Price List */}
       <ul>
-        <PriceItem />
+        <PriceItem
+          amount={5}
+          hasIcon={true}
+          icon="/icons/ftm-logo-priceitem.svg"
+        />
       </ul>
 
       {/* Price Input */}
