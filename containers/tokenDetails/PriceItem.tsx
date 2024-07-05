@@ -4,17 +4,17 @@ import React from "react";
 type PriceItemProps = {
   amount: number;
   hasIcon: boolean;
-  icon: string;
+  icon?: string;
 };
 const PriceItem = ({ amount, hasIcon, icon }: PriceItemProps) => {
   return (
     <button
       type="button"
-      className="flex rounded-[10px] text-neutral-0 items-center gap-[5px] border-[1.5px] border-[#172532] py-[3px] pl-[10px] w-[80px]"
+      className="flex rounded-[10px] text-neutral-0 justify-center items-center gap-[5px] border-[1.5px] border-[#172532] py-[3px] px-[10px] min-w-[90px] w-[max-content]"
     >
       {hasIcon && (
         <Image
-          src={icon}
+          src={icon ?? ""}
           width={20}
           height={20}
           alt="ftm logo superpump fun trade"
@@ -22,7 +22,7 @@ const PriceItem = ({ amount, hasIcon, icon }: PriceItemProps) => {
         />
       )}
 
-      <p className="font-[700]">{amount}</p>
+      <p className="font-[700]">{amount}%</p>
     </button>
   );
 };
