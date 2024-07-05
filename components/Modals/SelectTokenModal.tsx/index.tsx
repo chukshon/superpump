@@ -7,7 +7,7 @@ import TokenListItem from "./TokenListItem";
 const SelectTokenModal = () => {
   return (
     <Modal modalHeaderTitle={`Select a token`} width={400}>
-      <div className="px-[10px]">
+      <div className="px-[20px] mt-[10px]">
         <input
           placeholder="Search name or Address"
           className="w-full input-linear-gradient  border-[#306392] border-[1px] rounded-[4px] placeholder:text-[#595959] placeholder:text-[15px] py-[5px] placeholder:text-center outline-none text-neutral-0"
@@ -25,7 +25,8 @@ const SelectTokenModal = () => {
 
       {/* Token List */}
       <ul className="flex flex-col gap-[10px]">
-        <TokenListItem />
+        <TokenListItem isActive={true} />
+        <TokenListItem isActive={false} />
       </ul>
     </Modal>
   );
