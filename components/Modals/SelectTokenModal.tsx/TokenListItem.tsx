@@ -8,27 +8,26 @@ type TokenListItemProps = {
   tokenName: string;
   tokenTicker: string;
   tokenAmount: number;
+  tokenIcon: string;
 };
 const TokenListItem = ({
+  onSelectToken,
   isSelected,
   tokenName,
   tokenTicker,
   tokenAmount,
+  tokenIcon,
 }: TokenListItemProps) => {
   return (
     <button
+      onClick={onSelectToken}
       type="button"
       className={`flex justify-between items-center px-[20px] py-[10px] hover:bg-[#25405B] ${
         isSelected ? "opacity-[0.7]" : ""
       }`}
     >
       <div className="flex items-center gap-[10px]">
-        <Image
-          src="/icons/eth-logo.svg"
-          width="45"
-          height="45"
-          alt="Eth Logo pump fun"
-        />
+        <Image src={tokenIcon} width="45" height="45" alt="Eth Logo pump fun" />
         <span>
           <p className="text-neutral-0">{tokenName}</p>
           <p className="text-[#4A4A4AF5] text-left">{tokenTicker}</p>

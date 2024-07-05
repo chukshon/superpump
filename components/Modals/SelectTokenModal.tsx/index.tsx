@@ -17,11 +17,31 @@ const SelectTokenModal = () => {
         />
         {/* Suggested Token List */}
         <ul className="grid grid-cols-3 gap-x-[10px] gap-y-[10px] pt-[20px]">
-          <SuggestedTokenItem />
-          <SuggestedTokenItem />
-          <SuggestedTokenItem />
-          <SuggestedTokenItem />
-          <SuggestedTokenItem />
+          <SuggestedTokenItem
+            tokenIcon="/icons/eth-logo.svg"
+            onSelectToken={handleSelectedToken}
+            tokenTicker="ETH"
+          />
+          <SuggestedTokenItem
+            tokenIcon="/icons/eth-logo.svg"
+            onSelectToken={handleSelectedToken}
+            tokenTicker="ETH"
+          />
+          <SuggestedTokenItem
+            tokenIcon="/icons/eth-logo.svg"
+            onSelectToken={handleSelectedToken}
+            tokenTicker="ETH"
+          />
+          <SuggestedTokenItem
+            tokenIcon="/icons/eth-logo.svg"
+            onSelectToken={handleSelectedToken}
+            tokenTicker="ETH"
+          />
+          <SuggestedTokenItem
+            tokenIcon="/icons/eth-logo.svg"
+            onSelectToken={handleSelectedToken}
+            tokenTicker="ETH"
+          />
         </ul>
       </div>
       <Divider className="my-[20px] bg-[#16253C]" />
@@ -29,6 +49,7 @@ const SelectTokenModal = () => {
       {/* Token List */}
       <ul className="flex flex-col gap-[10px]">
         <TokenListItem
+          tokenIcon="/icons/eth-logo.svg"
           onSelectToken={handleSelectedToken}
           isSelected={true}
           tokenName="Ethereum"
@@ -36,8 +57,9 @@ const SelectTokenModal = () => {
           tokenAmount={3.2}
         />
         <TokenListItem
+          tokenIcon="/icons/eth-logo.svg"
           onSelectToken={handleSelectedToken}
-          isSelected={true}
+          isSelected={false}
           tokenName="Ethereum"
           tokenTicker="ETH"
           tokenAmount={3.2}
