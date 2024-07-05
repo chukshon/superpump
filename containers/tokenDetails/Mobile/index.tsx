@@ -5,7 +5,7 @@ import TradeDetailsBox from "../TokenPriceDetailsBox";
 import ChartViewHeader from "../ChartView/ChartViewHeader";
 import Tabs from "@/components/table/ChartTable/Tabs";
 import TradeHistoryTable from "@/components/table/ChartTable/TradeHistoryTable";
-import TradeItem from "../TradeSection";
+import TradeSection from "../TradeSection";
 import FooterTab from "./FooterTab";
 
 const Mobile = () => {
@@ -49,8 +49,8 @@ const Mobile = () => {
       <div className="fixed bottom-[0px] z-40 w-full">
         {/* Buy and sell Section */}
         {showFloatingBar && (
-          <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-one px-[30px] bg-neutral-900 py-[30px]">
-            <TradeItem />
+          <div className="border-[1px] rounded-tl-[10px] rounded-tr-[10px] border-one px-[10px] bg-neutral-900 py-[30px]">
+            <TradeSection />
           </div>
         )}
 

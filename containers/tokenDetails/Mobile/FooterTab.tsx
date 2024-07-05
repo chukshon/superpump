@@ -28,7 +28,7 @@ const FooterTab = ({ title, handleClick, isActive }: FooterTabProps) => {
       onClick={handleClick}
       className={`${
         isActive ? "bg-linear-gradient" : ""
-      } flex items-center justify-center flex-col w-[max-content] px-[20px] py-[10px]`}
+      } flex items-center justify-center flex-col w-[max-content] px-[30px] py-[15px]`}
     >
       <span className={`${color} w-[15px] h-[5px]`}></span>
       <p className="text-neutral-0">{title}</p>
