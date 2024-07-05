@@ -10,6 +10,21 @@ import FooterTab from "./FooterTab";
 
 const Mobile = () => {
   const [showFloatingBar, setShowFloatingBar] = React.useState(false);
+  const FOOTER_TAB_DATA = [
+    {
+      value: "buy",
+      label: "Buy",
+    },
+    {
+      value: "sell",
+      label: "Sell",
+    },
+    {
+      value: "chat",
+      label: "Chat",
+    },
+  ];
+  const [selectedTab, setSelectedTab] = React.useState<string | null>(null);
   return (
     <div className="lg:hidden">
       <div className="mx-[20px] my-[20px]">
@@ -41,24 +56,18 @@ const Mobile = () => {
 
         {/* Footer */}
         <div className="border-t-[2px] border-one bg-neutral-900 flex justify-between">
-          <FooterTab
-            title="Buy"
-            handleClick={() => {
-              setShowFloatingBar(!showFloatingBar);
-            }}
-          />
-          <FooterTab
-            title="Sell"
-            handleClick={() => {
-              setShowFloatingBar(!showFloatingBar);
-            }}
-          />
-          <FooterTab
-            title="Chat"
-            handleClick={() => {
-              setShowFloatingBar(!showFloatingBar);
-            }}
-          />
+          {FOOTER_TAB_DATA.map((tab) => {
+            return (
+              <FooterTab
+                title={tab.label}
+                isActive={selectedTab === tab.value}
+                handleClick={() => {
+                  setSelectedTab(tab.value);
+                  setShowFloatingBar(!showFloatingBar);
+                }}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

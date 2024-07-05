@@ -3,15 +3,34 @@ import React from "react";
 type FooterTabProps = {
   title: string;
   handleClick: () => void;
+  isActive: boolean;
 };
 
-const FooterTab = ({ title, handleClick }: FooterTabProps) => {
+const FooterTab = ({ title, handleClick, isActive }: FooterTabProps) => {
+  let color = "";
+
+  switch (title) {
+    case "Buy":
+      color = "bg-[#0ECB81]";
+      break;
+    case "Sell":
+      color = "bg-[#EC1966]";
+      break;
+    case "Chat":
+      color = "bg-[#003CFF]";
+      break;
+    default:
+      color = "bg-red-100";
+  }
+
   return (
     <button
       onClick={handleClick}
-      className="bg-blue-700 flex items-center justify-center flex-col w-[max-content] px-[20px] py-[10px]"
+      className={`${
+        isActive ? "bg-linear-gradient" : ""
+      } flex items-center justify-center flex-col w-[max-content] px-[20px] py-[10px]`}
     >
-      <span className="bg-red-500 w-[15px] h-[5px]"></span>
+      <span className={`${color} w-[15px] h-[5px]`}></span>
       <p className="text-neutral-0">{title}</p>
     </button>
   );
