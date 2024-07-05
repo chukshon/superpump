@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import TradeDetailsBox from "../TradeDetailsBox";
+import TradeDetailsBox from "../TokenPriceDetailsBox";
 import ChartViewHeader from "../ChartView/ChartViewHeader";
 import Tabs from "@/components/table/ChartTable/Tabs";
 import TradeHistoryTable from "@/components/table/ChartTable/TradeHistoryTable";
-import TradeItem from "../TradeItem";
+import TradeItem from "../TradeSection";
 import FooterTab from "./FooterTab";
 
 const Mobile = () => {

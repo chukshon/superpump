@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import PriceItem from "./PriceItem";
 import Image from "next/image";
@@ -11,20 +13,29 @@ const TradeSection = () => {
       {/* Buy and sell Tab */}
       <ul className="flex">
         <button
+          type="button"
           onClick={() => {
             setActiveTab("Buy");
           }}
-          className={
-            "border-one text-neutral-0 font-[700] flex items-center justify-center w-[50%] py-[10px] bg-linear-gradient  rounded-tl-[5px] rounded-tr-[5px]"
-          }
+          className={`text-neutral-0 font-[700] flex items-center justify-center w-[50%] py-[10px] ${
+            activeTab === "Buy"
+              ? "bg-linear-gradient border-one "
+              : " bg-linear-gradient-inactive"
+          } rounded-tl-[5px] rounded-tr-[5px]`}
         >
           Buy
         </button>
         <button
+          type="button"
           onClick={() => {
             setActiveTab("Sell");
           }}
-          className="text-neutral-150 font-[700] flex items-center justify-center w-[50%] py-[10px] bg-linear-gradient-inactive rounded-tr-[5px]"
+          className={`text-neutral-150 font-[700] flex items-center justify-center w-[50%] py-[10px] 
+          rounded-tr-[5px] ${
+            activeTab === "Sell"
+              ? "bg-linear-gradient  border-one"
+              : "bg-linear-gradient-inactive"
+          } `}
         >
           Sell
         </button>

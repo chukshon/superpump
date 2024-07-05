@@ -1,8 +1,8 @@
 import ChatSection from "@/containers/home/components/ChatSection";
 import ChartView from "@/containers/tokenDetails/ChartView";
 import TopBar from "@/containers/tokenDetails/TopBar";
-import TradeDetailsBox from "@/containers/tokenDetails/TradeDetailsBox";
-import TradeItem from "@/containers/tokenDetails/TradeItem";
+import TokenPriceDetailsBox from "@/containers/tokenDetails/TokenPriceDetailsBox";
+import TradeSection from "@/containers/tokenDetails/TradeSection";
 import React from "react";
 
 const Desktop = () => {
@@ -18,12 +18,12 @@ const Desktop = () => {
         <div className="w-[30%]  border-[1px] border-one px-[10px] py-[10px] rounded-[8px]">
           {/* Trade details */}
           <div className="mt-[10px]">
-            <TradeDetailsBox />
+            <TokenPriceDetailsBox />
           </div>
 
           {/* Buy and sell Section */}
           <div className="my-[10px]">
-            <TradeItem />
+            <TradeSection />
           </div>
 
           {/* Chat Section */}
