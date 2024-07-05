@@ -1,6 +1,6 @@
 import React from "react";
 
-const TradeDetailsBox = () => {
+const TokenPriceDetailsBox = () => {
   return (
     <div className="border-[1px] rounded-[5px] border-one text-neutral-0 flex gap-[10px] px-[10px] items-center py-[5px]">
       <span className="flex flex-col xl:w-full">
@@ -28,4 +28,4 @@ const TradeDetailsBox = () => {
   );
 };
 
-export default TradeDetailsBox;
+export default TokenPriceDetailsBox;
