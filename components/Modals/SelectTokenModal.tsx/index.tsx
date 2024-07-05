@@ -9,6 +9,11 @@ const SelectTokenModal = () => {
         placeholder="Search name or Address"
         className="border-[#306392] border-[1.5px] rounded-[4px] placeholder:text-[#595959] placeholder:text-[12px]"
       />
+      {/* Suggested Token List */}
+      <ul className="grid grid-cols-3 gap-x-[10px] gap-y-[10px]">
+        <SuggestedTokenItem />
+        <SuggestedTokenItem />
+      </ul>
     </Modal>
   );
 };
