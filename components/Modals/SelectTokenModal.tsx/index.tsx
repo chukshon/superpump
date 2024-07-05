@@ -3,10 +3,12 @@ import Modal from "../Modal";
 import SuggestedTokenItem from "./SuggestedTokenItem";
 import Divider from "@/components/ui/Divider";
 import TokenListItem from "./TokenListItem";
+import { useModalContext } from "@/context/ModalContext";
 
 const SelectTokenModal = () => {
+  const { hideModal } = useModalContext();
   const handleSelectedToken = () => {
-    console.log("hey");
+    hideModal();
   };
   return (
     <Modal modalHeaderTitle={`Select a token`} width={400}>
