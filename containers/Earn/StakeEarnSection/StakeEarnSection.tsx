@@ -3,7 +3,7 @@ import GroupDetails from "./GroupDetails";
 
 const StakeEarnSection = () => {
   return (
-    <div className="py-[20px] md:py-[40px] flex gap-[30px] md:gap-[50px] flex-col lg:flex-row px-[20px] lg:px-[0px]">
+    <div className="py-[20px] md:py-[40px] flex gap-[30px] md:gap-[80px] flex-col lg:flex-row px-[20px] lg:px-[30px]">
       {/* Left col*/}
       <div className="lg:w-[70%]">
         <span className="flex flex-col gap-[0px] md:hidden">
@@ -38,7 +38,7 @@ const StakeEarnSection = () => {
       </div>
 
       {/* Right Col */}
-      <div className="py-[10px] pr-[20px] border-[1.5px] border-[#172532] rounded-[8px] flex flex-col items-end">
+      <div className="max-w-[700px] lg:w-[25%] py-[10px] pr-[20px] border-[1.5px] border-[#172532] rounded-[8px] flex flex-col items-end">
         <GroupDetails title={"Epoch 01 Ends In"} desc={"6d:23h:17m:32s"} />
         <GroupDetails title={"Expected per vote"} desc={"$12.23"} />
         <GroupDetails title={"Expected Income"} desc={"$1,223.00"} />
