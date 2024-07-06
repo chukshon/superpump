@@ -6,11 +6,11 @@ const LockSection = () => {
   return (
     <div className=" px-[20px] lg:px-[30px]">
       <div className="lg:border-[#172532] lg:border-[1px] rounded-[8px] px-[0px] lg:px-[40px] lg:py-[30px]">
-        <div className="flex">
-          <div className="w-[60%]">
+        <div className="flex flex-col lg:flex-row gap-[50px]">
+          <div className="lg:w-[60%]">
             <StakeSection />
           </div>
-          <div className="w-[40%]">
+          <div className="lg:w-[40%]">
             <LockOverView />
           </div>
         </div>
