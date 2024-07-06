@@ -6,7 +6,7 @@ import DurationSelectorSection from "./DurationSelectorSection";
 const StakeSection = () => {
   return (
     <div>
-      <h4 className="text-neutral-0 font-[600] text-[18px]">
+      <h4 className="text-neutral-0 font-[600] text-[19px]">
         Lock $FOMO, get $fFOMO
       </h4>
 
