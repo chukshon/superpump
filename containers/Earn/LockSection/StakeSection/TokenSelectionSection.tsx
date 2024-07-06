@@ -1,5 +1,6 @@
 import React from "react";
 import TokenSelector from "../../components/TokenSelector";
+import InputTab from "../../components/InputTab";
 
 const TokenSelectionSection = () => {
   return (
@@ -8,6 +9,12 @@ const TokenSelectionSection = () => {
         Add token
       </h3>
       <TokenSelector />
+      <ul className="flex justify-between w-full mt-[20px]">
+        <InputTab value="25%" />
+        <InputTab value="50%" />
+        <InputTab value="75%" />
+        <InputTab value="Max" />
+      </ul>
     </div>
   );
 };
