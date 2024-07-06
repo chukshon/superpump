@@ -6,7 +6,7 @@ const TokenSelector = () => {
     <div className="border-[#172532] border-[1.5px] flex items-center rounded-[8px]  h-[60px] px-[10px]">
       <div className="flex items-start justify-between w-full">
         {/* Left */}
-        <div className="flex items-start gap-[10px] ">
+        <div className="flex items-center gap-[10px] ">
           <Image
             src="/icons/wftm-logo.svg"
             width="32"
