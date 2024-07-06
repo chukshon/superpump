@@ -23,9 +23,9 @@ const TokenomicsType = ({ type }: TokenomicsTypeProps) => {
       color = "bg-red-100";
   }
   return (
-    <div>
-      <span className={`w-[20px] h-[20px] rounded-full ${color}`}></span>
-      <p>{type}</p>
+    <div className="flex items-center gap-[10px]">
+      <div className={` w-[20px] h-[20px] rounded-full ${color}`}></div>
+      <p className="text-[12px] uppercase text-neutral-0">{type}</p>
     </div>
   );
 };
