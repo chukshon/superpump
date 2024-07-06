@@ -1,7 +1,12 @@
+"use client";
+
+import SelectTokenModal from "@/components/Modals/SelectTokenModal.tsx";
+import { useModalContext } from "@/context/ModalContext";
 import Image from "next/image";
 import React from "react";
 
 const TokenSelector = () => {
+  const { showModal } = useModalContext();
   return (
     <div className="border-[#172532] border-[1.5px] flex items-center rounded-[8px]  h-[60px] px-[10px]">
       <div className="flex items-start justify-between w-full">
@@ -13,6 +18,7 @@ const TokenSelector = () => {
             height="32"
             alt="Eth Logo"
             className="z-30 cursor-pointer"
+            onClick={() => showModal(<SelectTokenModal />)}
           />
           <span>
             <p className="text-neutral-0 text-[18px]">3.5</p>
