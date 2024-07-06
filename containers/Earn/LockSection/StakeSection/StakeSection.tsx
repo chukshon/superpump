@@ -1,5 +1,7 @@
 import React from "react";
 import TokenSelectionSection from "./TokenSelectionSection";
+import DurationSelector from "../../components/DurationSelector";
+import DurationSelectorSection from "./DurationSelectorSection";
 
 const StakeSection = () => {
   return (
@@ -13,7 +15,7 @@ const StakeSection = () => {
           <TokenSelectionSection />
         </div>
         <div className="w-full">
-          <TokenSelectionSection />
+          <DurationSelectorSection />
         </div>
       </div>
 
