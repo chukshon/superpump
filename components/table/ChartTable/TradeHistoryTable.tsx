@@ -25,7 +25,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import Image from "next/image";
+
 const data: Payment[] = [
   {
     id: "m5gr84i9",
