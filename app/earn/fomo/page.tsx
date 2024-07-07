@@ -20,11 +20,11 @@ const FomoPage = () => {
             <h1 className="text-[23px] text-neutral-0">$1,223,000.00</h1>
           </span>
         </div>
-        <div className="flex">
-          <div className="w-[30%]">
+        <div className="flex mt-[40px] gap-[40px]">
+          <div className="w-[15%]">
             <StepOneSection />
           </div>
-          <div className="w-[70%]">
+          <div className="w-[85%]">
             <StepTwoSection />
           </div>
         </div>
