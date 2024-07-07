@@ -8,7 +8,7 @@ const LiquiditySection = () => {
     <div className="py-[40px]">
       <div className="flex  gap-[20px] justify-center items-center">
         {/* Swap Section */}
-        <div className="flex gap-[10px] relative w-[60%]">
+        <div className="flex gap-[10px] relative w-[70%]">
           {/* Approve ETH */}
           <div className="w-[50%]">
             <button className="mb-[10px] text-[13px] bg-custom-radial text-neutral-0 py-[5px] px-[30px] rounded-[4px]">

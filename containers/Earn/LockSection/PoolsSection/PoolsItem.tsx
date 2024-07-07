@@ -67,7 +67,7 @@ const PoolsItem = () => {
         <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[50px]">
           {/* Tabs Section*/}
           <div>
-            <ul className="flex max-w-[600px]">
+            <ul className="flex max-w-[500px]">
               <CustomTabOne
                 label="Liquidity"
                 onClick={() => setSelectedTab("Liquidity")}
