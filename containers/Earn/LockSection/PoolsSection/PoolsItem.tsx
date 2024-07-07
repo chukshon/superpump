@@ -86,7 +86,7 @@ const PoolsItem = () => {
             </ul>
 
             {/* Selected Tab Container */}
-            <div>
+            <div className="border-one bg-[#0B1119] h-[100px] rounded-b-[10px]">
               {selectedTab === "Liquidity" && <LiquiditySection />}
               {selectedTab === "Sponsorship" && <SponsorshipSection />}
               {selectedTab === "Vote" && <VoteSection />}
