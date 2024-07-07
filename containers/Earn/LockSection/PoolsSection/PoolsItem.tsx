@@ -7,9 +7,12 @@ import LiquiditySection from "./PoolsTabs/LiquiditySection";
 import CustomTabOne from "@/components/ui/CustomTab/CustomTabOne";
 import SponsorshipSection from "./PoolsTabs/SponsorshipSection";
 import VoteSection from "./PoolsTabs/VoteSection";
+import { IoIosArrowUp } from "react-icons/io";
 
 const PoolsItem = () => {
   const [selectedTab, setSelectedTab] = React.useState("Liquidity");
+  const [toggleCollapsibleContainer, setToggleCollapsibleContainer] =
+    React.useState(false);
   return (
     <div className="">
       {/* Toggle container */}
@@ -44,41 +47,53 @@ const PoolsItem = () => {
         {/* Staked */}
         <GroupItem label="Staked" value="0 LP" />
 
-        <button type="button">
-          <FaAngleDoubleDown className="text-[#47A7FF]" size={20} />
+        <button
+          type="button"
+          onClick={() =>
+            setToggleCollapsibleContainer(!toggleCollapsibleContainer)
+          }
+        >
+          {!toggleCollapsibleContainer && (
+            <FaAngleDoubleDown className="text-[#47A7FF]" size={20} />
+          )}
+          {toggleCollapsibleContainer && (
+            <IoIosArrowUp className="text-[#47A7FF]" size={20} />
+          )}
         </button>
       </div>
 
       {/* Collapsible Container */}
-      <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[30px]">
-        {/* Tabs Section*/}
-        <div>
-          <ul className="flex max-w-[600px]">
-            <CustomTabOne
-              label="Liquidity"
-              onClick={() => setSelectedTab("Liquidity")}
-              isActive={selectedTab === "Liquidity"}
-            />
-            <CustomTabOne
-              label="Sponsorship"
-              onClick={() => setSelectedTab("Sponsorship")}
-              isActive={selectedTab === "Sponsorship"}
-            />
-            <CustomTabOne
-              label="Vote"
-              onClick={() => setSelectedTab("Vote")}
-              isActive={selectedTab === "Vote"}
-            />
-          </ul>
-
-          {/* Selected Tab Container */}
+      {toggleCollapsibleContainer && (
+        <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[30px]">
+          {/* Tabs Section*/}
           <div>
-            {selectedTab === "Liquidity" && <LiquiditySection />}
-            {selectedTab === "Sponsorship" && <SponsorshipSection />}
-            {selectedTab === "Vote" && <VoteSection />}
+            <ul className="flex max-w-[600px]">
+              <CustomTabOne
+                label="Liquidity"
+                onClick={() => setSelectedTab("Liquidity")}
+                isActive={selectedTab === "Liquidity"}
+              />
+              <CustomTabOne
+                label="Sponsorship"
+                onClick={() => setSelectedTab("Sponsorship")}
+                isActive={selectedTab === "Sponsorship"}
+              />
+              <CustomTabOne
+                label="Vote"
+                onClick={() => setSelectedTab("Vote")}
+                isActive={selectedTab === "Vote"}
+              />
+            </ul>
+
+            {/* Selected Tab Container */}
+            <div>
+              {selectedTab === "Liquidity" && <LiquiditySection />}
+              {selectedTab === "Sponsorship" && <SponsorshipSection />}
+              {selectedTab === "Vote" && <VoteSection />}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

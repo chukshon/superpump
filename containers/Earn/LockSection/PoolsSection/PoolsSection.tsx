@@ -29,6 +29,7 @@ const PoolsSection = () => {
       {/* Pools List */}
       <ul className="flex flex-col gap-[20px] mt-[20px]">
         <PoolsItem />
+        <PoolsItem />
       </ul>
     </div>
   );
