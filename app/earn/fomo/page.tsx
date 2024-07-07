@@ -1,4 +1,5 @@
 import StepOneSection from "@/containers/Fomo/StepOneSection";
+import StepThreeSection from "@/containers/Fomo/StepThreeSection";
 import StepTwoSection from "@/containers/Fomo/StepTwoSection";
 import React from "react";
 
@@ -24,6 +25,8 @@ const FomoPage = () => {
           <StepOneSection />
           <StepTwoSection />
         </div>
+
+        <StepThreeSection />
       </div>
     </div>
   );
