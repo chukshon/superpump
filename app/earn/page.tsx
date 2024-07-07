@@ -1,5 +1,6 @@
 import LockSection from "@/containers/Earn/LockSection/LockSection";
 import StakeEarnSection from "@/containers/Earn/StakeEarnSection/StakeEarnSection";
+
 import React from "react";
 
 const Earn = () => {
