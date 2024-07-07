@@ -21,12 +21,8 @@ const FomoPage = () => {
           </span>
         </div>
         <div className="flex flex-col lg:flex-row mt-[40px] gap-[10px] lg:gap-[40px]">
-          <div className="w-full md:w-[30%] xl:w-[15%]">
-            <StepOneSection />
-          </div>
-          <div className="w-full md:w-[85%]">
-            <StepTwoSection />
-          </div>
+          <StepOneSection />
+          <StepTwoSection />
         </div>
       </div>
     </div>
