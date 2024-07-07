@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import GroupItem from "./GroupItem";
 import { FaAngleDoubleDown } from "react-icons/fa";
+import LiquiditySection from "./PoolsTabs/LiquiditySection";
 
 const PoolsItem = () => {
   return (
@@ -44,7 +45,19 @@ const PoolsItem = () => {
       </div>
 
       {/* Collapsible Container */}
-      <div></div>
+      <div>
+        {/* Tabs */}
+        <ul>
+          <li>Liquidity</li>
+          <li>Sponsorship</li>
+          <li>Vote</li>
+        </ul>
+
+        {/* Selected Tab Container */}
+        <div>
+          <LiquiditySection />
+        </div>
+      </div>
     </div>
   );
 };
