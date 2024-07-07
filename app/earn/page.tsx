@@ -6,7 +6,7 @@ import React from "react";
 const Earn = () => {
   return (
     <div>
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1400px] mx-auto pb-[50px]">
         <StakeEarnSection />
         <LockSection />
       </div>
