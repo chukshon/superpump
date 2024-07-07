@@ -6,7 +6,7 @@ type GroupItemProps = {
 };
 const GroupItem = ({ label, value }: GroupItemProps) => {
   return (
-    <div className="flex flex-col gap-[px]">
+    <div className="flex flex-col">
       <p className="text-neutral-0">{label}</p>
       <p className="text-[#47A7FF] ">{value}</p>
     </div>

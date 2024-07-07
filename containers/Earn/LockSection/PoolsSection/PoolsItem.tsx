@@ -42,6 +42,9 @@ const PoolsItem = () => {
           <FaAngleDoubleDown className="text-[#47A7FF]" size={20} />
         </button>
       </div>
+
+      {/* Collapsible Container */}
+      <div></div>
     </div>
   );
 };
