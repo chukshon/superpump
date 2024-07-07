@@ -23,7 +23,11 @@ const StepThreeSection = () => {
       </div>
 
       {/* Vote list */}
-      <ul>
+      <ul className="mt-[30px] gap-x-[30px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[30px]">
+        <VoteCard />
+        <VoteCard />
+        <VoteCard />
+        <VoteCard />
         <VoteCard />
       </ul>
     </div>
