@@ -1,7 +1,12 @@
 import React from "react";
 
 const PoolsItem = () => {
-  return <div>Pools Item</div>;
+  return (
+    <div>
+      {/* Toggle container */}
+      <div></div>
+    </div>
+  );
 };
 
 export default PoolsItem;
