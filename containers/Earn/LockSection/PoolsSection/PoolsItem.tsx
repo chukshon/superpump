@@ -1,14 +1,19 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import GroupItem from "./GroupItem";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import LiquiditySection from "./PoolsTabs/LiquiditySection";
+import CustomTabOne from "@/components/ui/CustomTab/CustomTabOne";
+import SponsorshipSection from "./PoolsTabs/SponsorshipSection";
+import VoteSection from "./PoolsTabs/VoteSection";
 
 const PoolsItem = () => {
+  const [selectedTab, setSelectedTab] = React.useState("Liquidity");
   return (
-    <div className="bg-[#131A24] py-[20px] px-[20px]">
+    <div className="">
       {/* Toggle container */}
-      <div className="flex justify-between">
+      <div className="flex justify-between bg-[#131A24] py-[15px] px-[20px]">
         {/* Pair */}
         <span className="flex gap-[10px] items-center">
           <Image
@@ -45,17 +50,33 @@ const PoolsItem = () => {
       </div>
 
       {/* Collapsible Container */}
-      <div>
-        {/* Tabs */}
-        <ul>
-          <li>Liquidity</li>
-          <li>Sponsorship</li>
-          <li>Vote</li>
-        </ul>
-
-        {/* Selected Tab Container */}
+      <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[30px]">
+        {/* Tabs Section*/}
         <div>
-          <LiquiditySection />
+          <ul className="flex max-w-[600px]">
+            <CustomTabOne
+              label="Liquidity"
+              onClick={() => setSelectedTab("Liquidity")}
+              isActive={selectedTab === "Liquidity"}
+            />
+            <CustomTabOne
+              label="Sponsorship"
+              onClick={() => setSelectedTab("Sponsorship")}
+              isActive={selectedTab === "Sponsorship"}
+            />
+            <CustomTabOne
+              label="Vote"
+              onClick={() => setSelectedTab("Vote")}
+              isActive={selectedTab === "Vote"}
+            />
+          </ul>
+
+          {/* Selected Tab Container */}
+          <div>
+            {selectedTab === "Liquidity" && <LiquiditySection />}
+            {selectedTab === "Sponsorship" && <SponsorshipSection />}
+            {selectedTab === "Vote" && <VoteSection />}
+          </div>
         </div>
       </div>
     </div>
