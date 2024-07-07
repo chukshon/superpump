@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import PriceItem from "./PriceItem";
-import Image from "next/image";
 import BuySection from "./BuySection";
 import SellSection from "./SellSection";
 import CustomTabOne from "@/components/ui/CustomTab/CustomTabOne";
