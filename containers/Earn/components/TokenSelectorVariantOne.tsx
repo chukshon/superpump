@@ -5,10 +5,10 @@ import { useModalContext } from "@/context/ModalContext";
 import Image from "next/image";
 import React from "react";
 
-const TokenSelector = () => {
+const TokenSelectorVariantOne = () => {
   const { showModal } = useModalContext();
   return (
-    <div className="border-[#172532] border-[1.5px] flex items-center rounded-[8px]  h-[60px] px-[10px]">
+    <div className="border-[#172532] border-[1.5px] flex items-center rounded-[8px]  h-[60px] px-[20px]">
       <div className="flex items-start justify-between w-full">
         {/* Left */}
         <div className="flex items-center gap-[10px] ">
@@ -35,4 +35,4 @@ const TokenSelector = () => {
   );
 };
 
-export default TokenSelector;
+export default TokenSelectorVariantOne;

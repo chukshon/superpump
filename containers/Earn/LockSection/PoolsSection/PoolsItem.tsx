@@ -64,7 +64,7 @@ const PoolsItem = () => {
 
       {/* Collapsible Container */}
       {toggleCollapsibleContainer && (
-        <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[30px]">
+        <div className="bg-[#0F1621] px-[20px] pt-[20px] pb-[50px]">
           {/* Tabs Section*/}
           <div>
             <ul className="flex max-w-[600px]">
@@ -86,7 +86,7 @@ const PoolsItem = () => {
             </ul>
 
             {/* Selected Tab Container */}
-            <div className="border-one bg-[#0B1119] h-[100px] rounded-b-[10px]">
+            <div className="border-one bg-[#0B1119]  rounded-b-[10px]">
               {selectedTab === "Liquidity" && <LiquiditySection />}
               {selectedTab === "Sponsorship" && <SponsorshipSection />}
               {selectedTab === "Vote" && <VoteSection />}
