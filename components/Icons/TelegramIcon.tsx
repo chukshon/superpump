@@ -6,7 +6,7 @@ const TelegramIcon = ({
   size,
 }: {
   className?: string;
-  size: number;
+  size?: number;
 }) => {
   return (
     <PiTelegramLogoLight
