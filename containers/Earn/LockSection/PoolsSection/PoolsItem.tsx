@@ -16,7 +16,7 @@ const PoolsItem = () => {
   return (
     <div className="">
       {/* Toggle container */}
-      <div className="flex justify-between bg-[#131A24] py-[15px] px-[20px]">
+      <div className="flex justify-between bg-[#131A24] py-[15px] px-[20px] overflow-x-hidden">
         {/* Pair */}
         <span className="flex gap-[10px] items-center">
           <Image

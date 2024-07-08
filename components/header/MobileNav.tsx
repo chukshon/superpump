@@ -68,7 +68,7 @@ const MobileNav = () => {
                 href="/presale"
                 className="text-[20px] font-[500] text-neutral-0 font-space_grotesk"
               >
-                <SheetClose> Presale</SheetClose>
+                <SheetClose> Sale</SheetClose>
               </Link>
               <Link
                 href="/earn/fomo"
