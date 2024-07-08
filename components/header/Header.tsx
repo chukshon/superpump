@@ -45,51 +45,55 @@ const Header = () => {
   return (
     <header className="border-b-[3px] border-neutral-0">
       <div className="justify-between container w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
-        {/* LOGO */}
-        <Link href="/">
-          <Image
-            src="/icons/superpumpfun-logo.svg"
-            width="64"
-            height="64"
-            alt="superpumpfun logo"
-          />
-        </Link>
+        {/* Left */}
+        <div className="flex gap-[30px]">
+          {/* LOGO */}
+          <Link href="/">
+            <Image
+              src="/icons/superpumpfun-logo.svg"
+              width="64"
+              height="64"
+              alt="superpumpfun logo"
+            />
+          </Link>
+          {/* SOCIALS */}
+          <ul className=" items-center gap-[20px] hidden lg:flex">
+            {socials.map((social, index) => {
+              return (
+                <li key={index}>
+                  <a href={social.link} target="_blank">
+                    <Image
+                      src={social.logo}
+                      width={social.width}
+                      height={social.height}
+                      alt={social.alt}
+                    />
+                  </a>
+                </li>
+              );
+            })}
+            {/* Desktop Nav */}
+            <div className="hidden lg:block">
+              <DesktopNav />
+            </div>
+          </ul>
+        </div>
 
         {/* Mobile Connect Wallet */}
         <div className="lg:hidden flex">
           <ConnectWalletHeader />
         </div>
 
-        {/* SOCIALS */}
-        <ul className=" items-center gap-[20px] hidden lg:flex">
-          {socials.map((social, index) => {
-            return (
-              <li key={index}>
-                <a href={social.link} target="_blank">
-                  <Image
-                    src={social.logo}
-                    width={social.width}
-                    height={social.height}
-                    alt={social.alt}
-                  />
-                </a>
-              </li>
-            );
-          })}
-          {/* Desktop Nav */}
-          <div className="hidden lg:block">
-            <DesktopNav />
+        {/* Right */}
+        <div className="flex gap-[10px] items-center">
+          {/* SEARCH INPUT */}
+          <div className="hidden xl:flex">
+            <SearchInput />
           </div>
-        </ul>
-
-        {/* SEARCH INPUT */}
-        <div className="hidden xl:flex">
-          <SearchInput />
-        </div>
-
-        {/* Connect Wallet desktop*/}
-        <div className="hidden lg:flex">
-          <ConnectWalletHeader />
+          {/* Connect Wallet desktop*/}
+          <div className="hidden lg:flex">
+            <ConnectWalletHeader />
+          </div>
         </div>
 
         {/* Mobile Nav */}
