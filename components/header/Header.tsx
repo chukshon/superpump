@@ -85,7 +85,7 @@ const Header = () => {
         </div>
 
         {/* Right */}
-        <div className="flex gap-[10px] items-center">
+        <div className="hidden lg:flex gap-[10px] items-center">
           {/* SEARCH INPUT */}
           <div className="hidden xl:flex">
             <SearchInput />
