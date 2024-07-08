@@ -4,6 +4,7 @@ import SearchInput from "./SearchInput";
 import ConnectWalletHeader from "./ConnectWalletHeader";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
+import DesktopNav from "./DesktopNav";
 
 const Header = () => {
   const socials = [
@@ -41,20 +42,6 @@ const Header = () => {
     },
   ];
 
-  const tokenomics = [
-    {
-      title: "24H VOL",
-      desc: "$ 50M",
-    },
-    {
-      title: "LOCKED TVL",
-      desc: "$ 88M",
-    },
-    {
-      title: "TOKENS CREATED",
-      desc: "1,230,223",
-    },
-  ];
   return (
     <header className="border-b-[3px] border-neutral-0">
       <div className="justify-between container w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
@@ -89,18 +76,10 @@ const Header = () => {
               </li>
             );
           })}
-        </ul>
-
-        {/* TOKENOMICS */}
-        <ul className="text-neutral-0  hidden items-center gap-x-[30px] lg:flex">
-          {tokenomics.map((info, index) => {
-            return (
-              <li key={index}>
-                <p className="text-[16px] w-max">{info.title}</p>
-                <p className="mt-[15px]">{info.desc}</p>
-              </li>
-            );
-          })}
+          {/* Desktop Nav */}
+          <div className="hidden lg:block">
+            <DesktopNav />
+          </div>
         </ul>
 
         {/* SEARCH INPUT */}
