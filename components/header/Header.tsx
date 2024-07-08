@@ -3,6 +3,7 @@ import React from "react";
 import SearchInput from "./SearchInput";
 import ConnectWalletHeader from "./ConnectWalletHeader";
 import MobileNav from "./MobileNav";
+import Link from "next/link";
 
 const Header = () => {
   const socials = [
@@ -58,12 +59,14 @@ const Header = () => {
     <header className="border-b-[3px] border-neutral-0">
       <div className="justify-between container w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
         {/* LOGO */}
-        <Image
-          src="/icons/superpumpfun-logo.svg"
-          width="64"
-          height="64"
-          alt="superpumpfun logo"
-        />
+        <Link href="/">
+          <Image
+            src="/icons/superpumpfun-logo.svg"
+            width="64"
+            height="64"
+            alt="superpumpfun logo"
+          />
+        </Link>
 
         {/* Mobile Connect Wallet */}
         <div className="lg:hidden flex">
