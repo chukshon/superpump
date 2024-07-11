@@ -3,8 +3,11 @@ import React from "react";
 import Modal from "../Modal";
 import Divider from "@/components/ui/Divider";
 import StakeInputField from "../CreateNewPairModal/StakeInputField";
+import { useModalContext } from "@/context/ModalContext";
+import CreateNewPairModal from "../CreateNewPairModal";
 
 const LiquidStakingModal = () => {
+  const { showModal } = useModalContext();
   return (
     <Modal modalHeaderTitle={`Liquid Staking`} width={400}>
       <div className="px-[20px] pb-[20px]">
@@ -24,7 +27,13 @@ const LiquidStakingModal = () => {
         <button className="btn-variant-two w-full uppercase mb-[10px]">
           Proceed
         </button>
-        <button className="btn-variant-two w-full uppercase">
+        <button
+          type="button"
+          className="btn-variant-two w-full uppercase"
+          onClick={() => {
+            showModal(<CreateNewPairModal />);
+          }}
+        >
           Create Pair
         </button>
         <Divider className="bg-[rgba(71,167,255,0.24)] h-[2px] my-[20px]" />
