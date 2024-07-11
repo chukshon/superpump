@@ -6,16 +6,28 @@ import Image from "next/image";
 import React from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-const TokenSelectorVariantII = () => {
+type TokenSelectorVariantIIProps = {
+  label: string;
+  balance: number;
+  tokenTicker: string;
+  tokenImage: string;
+};
+
+const TokenSelectorVariantII = ({
+  label,
+  balance,
+  tokenTicker,
+  tokenImage,
+}: TokenSelectorVariantIIProps) => {
   const { showModal } = useModalContext();
   return (
     <div>
       {/* Label and total balance */}
       <div className="flex justify-between items-center mb-[10px]">
-        <p className="text-[#47A7FF] text-[16px] font-[500]">
-          Select First Token:
+        <p className="text-[#47A7FF] text-[16px] font-[500]">{label}</p>
+        <p className="text-[#4A4A4A] text-[13px]">
+          Balance: {balance} {tokenTicker}
         </p>
-        <p className="text-[#4A4A4A] text-[13px]">Balance: 6.9 WFTM</p>
       </div>
 
       {/* Token Selection */}
@@ -33,7 +45,7 @@ const TokenSelectorVariantII = () => {
         >
           <p className="text-neutral-0 text-[13px]">WFTM</p>
           <Image
-            src="/icons/wftm-logo.svg"
+            src={tokenImage}
             width="32"
             height="32"
             alt="Eth Logo"
