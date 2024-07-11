@@ -4,7 +4,7 @@ import React from "react";
 const FileUpload = () => {
   return (
     <div className="flex flex-col gap-[20px]">
-      <div className="text-neutral-0 rounded-[8px] border-variant-one w-[full] h-[200px] flex items-center justify-center">
+      <div className="bg-[rgba(0,0,0,0.24)] text-neutral-0 rounded-[8px] border-variant-one w-[full] h-[200px] flex items-center justify-center">
         Show Preview
       </div>
       <div className="flex gap-[10px]">
