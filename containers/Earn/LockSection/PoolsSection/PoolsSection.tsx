@@ -1,8 +1,12 @@
+"use client";
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import React from "react";
 import PoolsItem from "./PoolsItem";
+import { useModalContext } from "@/context/ModalContext";
+import CreateNewPairModal from "@/components/Modals/CreateNewPairModal";
 
 const PoolsSection = () => {
+  const { showModal } = useModalContext();
   return (
     <div className="mt-[50px]">
       {/*Search Input and filter section */}
@@ -14,6 +18,9 @@ const PoolsSection = () => {
           />
           <button
             type="button"
+            onClick={() => {
+              showModal(<CreateNewPairModal />);
+            }}
             className="hidden lg:block text-neutral-0 border-[2px] border-[#47A7FF] bg-[#0D0D0D] rounded-[4px] py-[10px] px-[10px]"
           >
             Create New Pair
