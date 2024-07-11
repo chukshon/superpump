@@ -6,8 +6,11 @@ import TextArea from "@/components/FormFields/TextArea";
 import FileUpload from "./FileUpload";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Slider } from "@/components/ui/slider";
+import { useModalContext } from "@/context/ModalContext";
+import PresaleSettingsModal from "../PresaleSettingsModal";
 
 const CreateTokenModal = () => {
+  const { showModal } = useModalContext();
   return (
     <Modal modalHeaderTitle={`Token Creation`} width={714}>
       <div className="px-[20px]">
@@ -68,7 +71,15 @@ const CreateTokenModal = () => {
 
         <div className="mt-[40px] flex gap-[35px] lg:gap-[20px] flex-col-reverse lg:flex-row ">
           <div className="flex flex-col gap-[10px] lg:w-[40%] items-center lg:items-start">
-            <button className="btn-variant-two uppercase">Presale</button>
+            <button
+              type="button"
+              className="btn-variant-two uppercase"
+              onClick={() => {
+                showModal(<PresaleSettingsModal />);
+              }}
+            >
+              Presale
+            </button>
             <button className="btn-variant-two uppercase">Fair Launch</button>
           </div>
 
