@@ -27,7 +27,7 @@ const DurationSelector = ({ label }: DurationSelectorProps) => {
         {/* Right */}
         <p className="text-[#4A4A4A] text-[13px]">Weeks(s)</p>
       </div>
-      <ul className="flex justify-between w-full mt-[20px]">
+      <ul className="flex justify-between w-full mt-[10px]">
         <InputTab value="1W" />
         <InputTab value="1M" />
         <InputTab value="3M" />
