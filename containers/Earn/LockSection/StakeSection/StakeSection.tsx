@@ -1,7 +1,6 @@
 import React from "react";
-import TokenSelectionSection from "./TokenSelectionSection";
 import DurationSelector from "../../components/DurationSelector";
-import DurationSelectorSection from "./DurationSelectorSection";
+import TokenSelectorVariantOne from "../../components/TokenSelectorVariantOne";
 
 const StakeSection = () => {
   return (
@@ -12,10 +11,10 @@ const StakeSection = () => {
 
       <div className="mt-[20px] lg:mt-[30px] flex flex-col lg:flex-row w-full gap-[30px]">
         <div className="w-full max-w-[600px]">
-          <TokenSelectionSection />
+          <TokenSelectorVariantOne label="Add token" />
         </div>
         <div className="w-full max-w-[600px]">
-          <DurationSelectorSection />
+          <DurationSelector label="Add Duration" />
         </div>
       </div>
 
