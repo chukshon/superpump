@@ -37,7 +37,7 @@ const Modal = ({
       >
         <motion.div
           style={{ width: `${width}px` }}
-          className="bg-neutral-900 backdrop-blur-[10px] overflow-hidden rounded-[10px] md:max-w-[1000px]  border-[1px] border-neutral-0"
+          className="modal-bg-one backdrop-blur-[10px] overflow-hidden rounded-[10px] md:max-w-[1000px]  border-[1px] border-neutral-0"
           onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) =>
             e.stopPropagation()
           }
