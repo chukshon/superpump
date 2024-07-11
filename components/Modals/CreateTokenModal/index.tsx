@@ -3,7 +3,7 @@ import Modal from "../Modal";
 
 const CreateTokenModal = () => {
   return (
-    <Modal modalHeaderTitle={`Report [“User” or “Content”]`} width={514}>
+    <Modal modalHeaderTitle={`Token Creation`} width={514}>
       <div className="h-[900px] ">Hey</div>
     </Modal>
   );
