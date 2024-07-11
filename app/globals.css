@@ -185,4 +185,15 @@
     background: rgb(226, 63, 86);
     background: linear-gradient(63deg, rgba(226, 63, 86, 1) 4%, rgba(107, 31, 41, 1) 85%);
   }
+
+  .border-variant-one {
+    border-color: rgba(71, 167, 255, 0.56);
+    @apply border-[1px]
+  }
+
+  .btn-variant-one {
+    background: rgb(5, 58, 234);
+    background: linear-gradient(99deg, rgba(5, 58, 234, 1) 4%, rgba(17, 54, 152, 1) 85%);
+    @apply text-neutral-0 rounded-[4px] py-[8px]
+  }
 }
