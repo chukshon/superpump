@@ -8,7 +8,7 @@ const StakeInputField = ({ label }: StakeInputFieldProps) => {
   return (
     <div>
       {/* Label */}
-      <p className="text-[#47A7FF] text-[16px] font-[500]">{label}</p>
+      <p className="text-[#47A7FF] text-[16px] font-[500] mb-[5px]">{label}</p>
       {/* Token Selection */}
       <div className="border-variant-one bg-[rgba(0,0,0,0.24)] border-[1px] flex justify-between items-center rounded-[8px]  h-[55px] px-[20px]">
         {/* Token amount and usd equivalent */}
