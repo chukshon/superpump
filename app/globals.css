@@ -206,6 +206,6 @@
 
   .modal-bg-one {
     background: rgb(19, 20, 24);
-    background: linear-gradient(180deg, rgba(19, 20, 24, 1) 18%, rgba(26, 59, 109, 1) 82%);
+    background: linear-gradient(180deg, rgba(19, 20, 24, 1) 28%, rgba(26, 59, 109, 1) 92%);
   }
 }
