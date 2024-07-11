@@ -69,7 +69,7 @@ const Modal = ({
             />
           )}
 
-          <div className="overflow-y-auto shadow-[0px_0px_10px_rgba(0, 0, 0, 0.1)] h-[100%] max-h-[500px] w-[100%] ">
+          <div className="overflow-y-auto shadow-[0px_0px_10px_rgba(0, 0, 0, 0.1)] h-[100%] max-h-[500px] lg:max-h-[700px] w-[100%] ">
             {children}
           </div>
         </motion.div>
