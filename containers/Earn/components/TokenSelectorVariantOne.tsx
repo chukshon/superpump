@@ -7,7 +7,7 @@ import React from "react";
 import InputTab from "./InputTab";
 
 type TokenSelectorVariantOneProps = {
-  label: string;
+  label?: string;
 };
 const TokenSelectorVariantOne = ({ label }: TokenSelectorVariantOneProps) => {
   const { showModal } = useModalContext();
