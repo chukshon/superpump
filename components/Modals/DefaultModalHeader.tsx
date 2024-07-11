@@ -12,7 +12,9 @@ const DefaultModalHeader = ({
 }: DefaultModalHeaderProps) => {
   return (
     <div className="flex items-center justify-between px-[15px] py-[15px]">
-      <h3 className="font-sora font-bold text-neutral-0">{modalHeaderTitle}</h3>
+      <h3 className="lg:text-[25px] font-sora font-bold text-neutral-0">
+        {modalHeaderTitle}
+      </h3>
       <button type="button" className="disabled:pointer-events-none">
         <Image
           src={"/icons/close-icon.svg"}
