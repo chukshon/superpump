@@ -9,8 +9,11 @@ import SearchInput from "../components/MobileSearchInput";
 import SelectVariantOne from "@/components/ui/SelectVariantOne";
 import { TokenT } from "@/types";
 import TokenCardMobileView from "../components/TokenList/TokenCard/TokenCardMobileView";
+import { useModalContext } from "@/context/ModalContext";
+import CreateTokenModal from "@/components/Modals/CreateTokenModal";
 
 const MainPageMobileView = () => {
+  const { showModal } = useModalContext();
   type tabsT = "superChat" | "portfolio" | "marketUpdate" | "latestTx";
   type TokenListT = "launched" | "sale";
   const TabsData: { label: string; value: string }[] = [
@@ -122,7 +125,13 @@ const MainPageMobileView = () => {
 
       {/* Create Token */}
       <div className="mt-[30px] flex justify-center">
-        <button className="w-full mx-[20px] rounded-[4px] bg-custom-radial py-[8px] px-[20px border-[2px] border-neutral-0">
+        <button
+          type="button"
+          onClick={() => {
+            showModal(<CreateTokenModal />);
+          }}
+          className="w-full mx-[20px] rounded-[4px] bg-custom-radial py-[8px] px-[20px border-[2px] border-neutral-0"
+        >
           Create Token
         </button>
       </div>
