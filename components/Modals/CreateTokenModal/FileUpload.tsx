@@ -8,10 +8,10 @@ const FileUpload = () => {
         Show Preview
       </div>
       <div className="flex gap-[10px]">
-        <button className="btn-variant-one px-[20px] w-[40%] text-[13px]">
+        <button className="btn-variant-one w-[40%] px-[20px] lg:w-[40%] text-[13px]">
           Upload Logo
         </button>
-        <div className="w-[60%]">
+        <div className="w-full lg:w-[60%]">
           <InputVariantOne
             type="text"
             name="imageLink"
