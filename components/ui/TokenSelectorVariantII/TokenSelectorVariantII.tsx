@@ -31,7 +31,7 @@ const TokenSelectorVariantII = ({
       </div>
 
       {/* Token Selection */}
-      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] border-[1px] flex justify-between items-center rounded-[8px]  h-[60px] px-[20px]">
+      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] border-[1px] flex justify-between items-center rounded-[8px]  h-[55px] px-[20px]">
         {/* Token amount and usd equivalent */}
         <div>
           <p className="text-neutral-0 text-[16px]">3.5</p>

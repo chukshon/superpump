@@ -8,8 +8,8 @@ import DurationSelector from "@/containers/Earn/components/DurationSelector";
 const CreateNewPairModal = () => {
   return (
     <Modal modalHeaderTitle={`New Pair`} width={400}>
-      <div className="px-[20px] h-[500px]">
-        <Divider className="bg-[rgba(71,167,255,0.24)] h-[1.5px]" />
+      <div className="px-[20px] pb-[20px]">
+        <Divider className="bg-[rgba(71,167,255,0.24)] h-[2px]" />
 
         {/* First Token  */}
         <div className="mt-[20px]">
@@ -34,6 +34,22 @@ const CreateNewPairModal = () => {
         {/* Lock Period */}
         <div className="mt-[20px]">
           <DurationSelector label=" Lock Period" />
+        </div>
+
+        {/* Price Information */}
+        <div className="mt-[20px] flex items-center lg:items-start flex-col">
+          <Divider className="bg-[rgba(71,167,255,0.24)] h-[2px] mb-[10px]" />
+          <h3 className="text-[#47A7FF] font-[600] text-[15px] mb-[10px]">
+            Price Information
+          </h3>
+          <p className="text-neutral-0 text-[16px]">25 WFTM per WETH</p>
+          <p className="text-neutral-0 text-[16px]">0.001 WETH per WFTM</p>
+        </div>
+
+        <div className="flex justify-center">
+          <button type="button" className="btn-variant-two mt-[20px]">
+            Create Pair
+          </button>
         </div>
       </div>
     </Modal>

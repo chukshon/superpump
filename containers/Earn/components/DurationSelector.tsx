@@ -11,7 +11,7 @@ const DurationSelector = ({ label }: DurationSelectorProps) => {
       <h3 className="text-[#47A7FF] font-[600] text-[15px] mb-[10px]">
         {label}
       </h3>
-      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] rounded-[8px] flex justify-between items-center h-[60px] px-[10px]">
+      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] rounded-[8px] flex justify-between items-center h-[55px] px-[10px]">
         {/* Left */}
         <div className="flex items-center gap-[10px] ">
           <Image

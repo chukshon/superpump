@@ -16,6 +16,7 @@ const PoolsSection = () => {
             placeholder="Search Pools"
             className="z-40 py-[10px] px-[10px] w-full lg:w-[70%] outline-none bg-[transparent] placeholder:text-[16px] text-[16px] placeholder:text-[#4A4A4ACC] text-neutral-50 active:bg-[transparent] placeholder:font-[600] font-space_grotesk border-[1px] rounded-[4px]"
           />
+          {/* Create New Pair btn desktop view*/}
           <button
             type="button"
             onClick={() => {
