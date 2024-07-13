@@ -21,14 +21,12 @@ export const useModalContext = () => {
 };
 
 export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
-  const [modalContent, setModalContent] = useState<
-    React.ReactNode | undefined
-  >();
+  const [modals, setModals] = useState<React.ReactNode[]>([]);
   const showModal = (modal: React.ReactNode) => {
-    setModalContent(modal);
+    setModals((prev) => [...prev, modal]);
   };
   const hideModal = () => {
-    setModalContent(undefined);
+    setModals((prev) => prev.slice(0, -1));
   };
 
   const value = {
@@ -38,7 +36,11 @@ export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <ModalContext.Provider value={value}>
-      {!!modalContent ? modalContent : null}
+      {modals.map((modalContent, index) => (
+        <div key={index} className="modal-overlay">
+          {modalContent}
+        </div>
+      ))}
       {children}
     </ModalContext.Provider>
   );
