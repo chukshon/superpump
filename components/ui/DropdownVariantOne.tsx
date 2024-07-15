@@ -11,11 +11,13 @@ import { FaAngleDown } from "react-icons/fa";
 type DropdownVariantOneProps = {
   dropDownMenuContent: { label: string; value: string; onClick: () => void }[];
   defaultSelectedItem: { label: string; value: string };
+  dropDownTriggerClassName?: string;
 };
 
 const DropdownVariantOne = ({
   defaultSelectedItem,
   dropDownMenuContent,
+  dropDownTriggerClassName,
 }: DropdownVariantOneProps) => {
   const [selectedItem, setSelectedItem] = React.useState(
     defaultSelectedItem.label
@@ -23,8 +25,10 @@ const DropdownVariantOne = ({
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="justify-between rounded-sm px-2 py-1.5 bg-[#3C3C3C] min-w-[200px] text-[#828282] flex items-center gap-[5px] outline-none">
-        <p className="text-[#828282]">{selectedItem}</p>
+      <DropdownMenuTrigger
+        className={`${dropDownTriggerClassName} justify-between rounded-sm px-2 py-1.5 bg-[#3C3C3C] min-w-[200px] text-[#828282] flex items-center gap-[5px] outline-none`}
+      >
+        <p className="">{selectedItem}</p>
         <FaAngleDown />
       </DropdownMenuTrigger>
       <DropdownMenuContent
