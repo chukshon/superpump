@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import SearchInput from "./SearchInput";
@@ -5,8 +7,11 @@ import ConnectWalletHeader from "./ConnectWalletHeader";
 import MobileNav from "./MobileNav";
 import Link from "next/link";
 import DesktopNav from "./DesktopNav";
+import DropdownVariantOne from "../ui/DropdownVariantOne";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   const socials = [
     {
       name: "chart",
@@ -42,6 +47,44 @@ const Header = () => {
     },
   ];
 
+  const DropDownMenuContents = [
+    {
+      label: "Features",
+      value: "features",
+      onClick: () => {
+        router.push("/");
+      },
+    },
+    {
+      label: "Sale",
+      value: "sale",
+      onClick: () => {
+        router.push("/presale");
+      },
+    },
+    {
+      label: "Trade",
+      value: "trade",
+      onClick: () => {
+        router.push("/token/2");
+      },
+    },
+    {
+      label: "Earn",
+      value: "earn",
+      onClick: () => {
+        router.push("/earn");
+      },
+    },
+    {
+      label: "Vote",
+      value: "vote",
+      onClick: () => {
+        router.push("/earn/fomo");
+      },
+    },
+  ];
+
   return (
     <header className="border-b-[3px] border-neutral-0">
       <div className="justify-between container w-[100%] flex items-center gap-[40px] py-[10px]  lg:py-[30px] px-[20px]">
@@ -74,7 +117,10 @@ const Header = () => {
             })}
             {/* Desktop Nav */}
             <div className="hidden lg:block">
-              <DesktopNav />
+              <DropdownVariantOne
+                dropDownMenuContent={DropDownMenuContents}
+                defaultSelectedItem={{ label: "Features", value: "features" }}
+              />
             </div>
           </ul>
         </div>
