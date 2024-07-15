@@ -191,6 +191,10 @@
     @apply border-[1px]
   }
 
+  .border-variant-two {
+    @apply border-[#49494B] border-[1px]
+  }
+
   .btn-variant-one {
     background: rgb(5, 58, 234);
     background: linear-gradient(99deg, rgba(5, 58, 234, 1) 4%, rgba(17, 54, 152, 1) 85%);
