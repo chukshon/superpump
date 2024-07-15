@@ -11,7 +11,7 @@ const DurationSelector = ({ label }: DurationSelectorProps) => {
       <h3 className="text-[#47A7FF] font-[600] text-[15px] mb-[10px]">
         {label}
       </h3>
-      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] rounded-[8px] flex justify-between items-center h-[55px] px-[10px]">
+      <div className="border-variant-one bg-[rgba(0,0,0,0.24)] rounded-[8px] flex justify-between items-center h-[60px] px-[10px]">
         {/* Left */}
         <div className="flex items-center gap-[10px] ">
           <Image
@@ -27,7 +27,7 @@ const DurationSelector = ({ label }: DurationSelectorProps) => {
         {/* Right */}
         <p className="text-[#4A4A4A] text-[13px]">Weeks(s)</p>
       </div>
-      <ul className="flex justify-between w-full mt-[10px]">
+      <ul className="flex justify-between w-full mt-[20px]">
         <InputTab value="1W" />
         <InputTab value="1M" />
         <InputTab value="3M" />
