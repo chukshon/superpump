@@ -9,6 +9,7 @@ import Link from "next/link";
 import DesktopNav from "./DesktopNav";
 import DropdownVariantOne from "../ui/DropdownVariantOne";
 import { useRouter } from "next/navigation";
+import ConnectWalletMobile from "./ConnectWalletMobile";
 
 const Header = () => {
   const router = useRouter();
@@ -127,11 +128,11 @@ const Header = () => {
 
         {/* Mobile Connect Wallet */}
         <div className="lg:hidden flex">
-          <ConnectWalletHeader />
+          <ConnectWalletMobile />
         </div>
 
         {/* Right */}
-        <div className="hidden lg:flex gap-[10px] items-center">
+        <div className="hidden lg:flex gap-[30px] items-center">
           {/* SEARCH INPUT */}
           <div className="hidden xl:flex">
             <SearchInput />

@@ -26,10 +26,10 @@ const DropdownVariantOne = ({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className={`${dropDownTriggerClassName} justify-between rounded-sm px-2 py-1.5 bg-[#3C3C3C] min-w-[200px] text-[#828282] flex items-center gap-[5px] outline-none`}
+        className={`${dropDownTriggerClassName} justify-between rounded-sm px-2 py-1.5 bg-[#2D2D2D] min-w-[200px] text-[#828282] flex items-center gap-[5px] outline-none`}
       >
         <p className="">{selectedItem}</p>
-        <FaAngleDown />
+        <FaAngleDown className="text-neutral-0" />
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="start"
