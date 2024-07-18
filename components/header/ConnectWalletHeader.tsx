@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { MdOutlineLogout } from "react-icons/md";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const ConnectWalletHeader = () => {
   const isConnected = false;
@@ -26,12 +27,13 @@ const ConnectWalletHeader = () => {
           />
         </div>
       ) : (
-        <button
-          type="button"
-          className="z-30 rounded-[4px] btn-variant-two py-[10px] px-[30px]"
-        >
-          Connect wallet
-        </button>
+        <ConnectButton />
+        // <button
+        //   type="button"
+        //   className="z-30 rounded-[4px] btn-variant-two py-[10px] px-[30px]"
+        // >
+        //   Connect wallet
+        // </button>
       )}
     </>
   );

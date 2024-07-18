@@ -116,6 +116,7 @@ const Header = () => {
                 </li>
               );
             })}
+
             {/* Desktop Nav */}
             <div className="hidden lg:block">
               <DropdownVariantOne
