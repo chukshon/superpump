@@ -1,5 +1,12 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
+import {
+  rainbowWallet,
+  metaMaskWallet,
+  coinbaseWallet,
+  walletConnectWallet,
+} from "@rainbow-me/rainbowkit/wallets";
 import {
   arbitrum,
   base,
