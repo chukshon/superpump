@@ -12,34 +12,59 @@ const TokenList = () => {
     {
       label: "Bump",
       value: "bump",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "Oldest Created",
       value: "OldestCreated",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "Newest Created",
       value: "NewestCreated",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "Token Name",
+
       value: "TokenName",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "MarketCap (Highest)",
       value: "MarketCapHighest",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "MarketCap (Lowest)",
       value: "MarketCapLowest",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "Highest Price",
       value: "Highest Price",
+      onClick: () => {
+        console.log("bump");
+      },
     },
     {
       label: "Lowest Price",
       value: "Lowest Price",
+      onClick: () => {
+        console.log("bump");
+      },
     },
   ];
 
