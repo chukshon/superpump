@@ -45,7 +45,7 @@ const DropdownVariantOne = ({
               }}
               key={item.value}
             >
-              {item.value}
+              {item.label}
             </DropdownMenuItem>
           );
         })}
