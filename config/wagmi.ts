@@ -15,19 +15,16 @@ import {
   optimism,
   polygon,
   sepolia,
+  fantomTestnet,
 } from "wagmi/chains";
+import { createConfig, http } from "@wagmi/core";
 
 export const config = getDefaultConfig({
   appName: "Superpumpfun wallet connect setup",
-  projectId: "YOUR_PROJECT_ID",
-  chains: [
-    mainnet,
-    polygon,
-    optimism,
-    arbitrum,
-    base,
-    fantom,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
-  ],
+  projectId: "4e21c4d7a9f2f2f5d090522d62a637d7",
+  chains: [mainnet, polygon, optimism, arbitrum, base, fantom, fantomTestnet],
+  transports: {
+    [fantomTestnet.id]: http("https://rpc.testnet.fantom.network"),
+  },
   ssr: true,
 });
