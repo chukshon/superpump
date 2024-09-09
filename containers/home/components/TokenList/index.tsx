@@ -5,8 +5,44 @@ import { TokenT } from "@/types";
 import TokenCard from "./TokenCard";
 import { useModalContext } from "@/context/ModalContext";
 import CreateTokenModal from "@/components/Modals/CreateTokenModal";
+import DropdownVariantOne from "@/components/ui/DropdownVariantOne";
 
 const TokenList = () => {
+  const DropDownMenuContents = [
+    {
+      label: "Bump",
+      value: "bump",
+    },
+    {
+      label: "Oldest Created",
+      value: "OldestCreated",
+    },
+    {
+      label: "Newest Created",
+      value: "NewestCreated",
+    },
+    {
+      label: "Token Name",
+      value: "TokenName",
+    },
+    {
+      label: "MarketCap (Highest)",
+      value: "MarketCapHighest",
+    },
+    {
+      label: "MarketCap (Lowest)",
+      value: "MarketCapLowest",
+    },
+    {
+      label: "Highest Price",
+      value: "Highest Price",
+    },
+    {
+      label: "Lowest Price",
+      value: "Lowest Price",
+    },
+  ];
+
   const { showModal } = useModalContext();
   type TokenListT = "launched" | "sale";
   const tokenList: TokenT[] = [
@@ -94,8 +130,12 @@ const TokenList = () => {
           >
             Create Token
           </button>
-          <div className="w-[50%] flex items-center">
-            <SelectVariantOne label="Sort:" />
+          <div className="w-[50%] flex items-center gap-[10px]">
+            <p>Sort:</p>
+            <DropdownVariantOne
+              dropDownMenuContent={DropDownMenuContents}
+              defaultSelectedItem={{ label: "Features", value: "features" }}
+            />
           </div>
         </div>
       </div>
