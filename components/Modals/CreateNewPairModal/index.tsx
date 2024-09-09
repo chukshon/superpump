@@ -4,8 +4,29 @@ import Modal from "../Modal";
 import Divider from "@/components/ui/Divider";
 import TokenSelectorVariantII from "@/components/ui/TokenSelectorVariantII/TokenSelectorVariantII";
 import DurationSelector from "@/containers/Earn/components/DurationSelector";
+import {
+  factoryContractConfig,
+  poolExecutionerContractConfig,
+} from "@/contracts/contracts";
+import { useWriteContract, useReadContract } from "wagmi";
+import { parseEther, formatEther, parseGwei } from "viem";
 
 const CreateNewPairModal = () => {
+  const { writeContract, isPending, error } = useWriteContract();
+  const createNewPairArgs = {
+    token: "",
+    beneficiery: "0x0000000....000",
+    base: 0,
+    tax: true,
+    ref: "",
+  };
+  const handleCreateNewPair = () => {
+    writeContract({
+      ...factoryContractConfig,
+      functionName: "createNewPool",
+      args: [{ ...createNewPairArgs }],
+    });
+  };
   return (
     <Modal modalHeaderTitle={`New Pair`} width={400}>
       <div className="px-[20px] pb-[20px]">
