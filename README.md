@@ -2,17 +2,18 @@ This is a dapp buit on next js
 
 Features 
 
-- Creating token
+- Creating token either as a presale or as fair launch
 - Liquidity staking
-- Creating liquidity pair, Sponsorship and voting
+- Withdrawing staked liquidity
+- Creating liquidity pair, Sponsorship and voting, Liquidity Staking Pairs and earning
 - Buy/Sell token
 - Wallet connection on the following chains(ftm, base, bnb and ethereum)
 - Voting with ftm
 - Bidding presale tokens
 
 
-Tech Specs
 
+Tech Specs
 - Wagmi 
 - Ether js
 - Rainbow Kit
